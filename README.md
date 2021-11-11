@@ -19,11 +19,14 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * pics of site 
 
 ## Installation Instructions
-    * make sure you have installed React
-    * To run Mastermind2.0 fork and clone this repo 
-    * in your terminal cd into the new directory
-    * type $ npm install to install the required dependencies 
-    * type $ npm start to run the React app
+* make sure you have installed React
+* To run Mastermind2.0 fork and clone this repo 
+* in your terminal cd into the new directory
+* to install the required dependencies:  
+    >`$ npm install` 
+* to run the React app: 
+    >`$ npm start` 
+
 ## Technologies Used
 * explanations of the technologies used (including APIs)
 ## Wireframes
