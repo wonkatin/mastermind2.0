@@ -8,10 +8,10 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * The player has ten attempts to determine the secret code.
 * Each guess attempt will be given feedback with one or more of the following responses: 
     * The player has guessed __  correct number(s). 
-    * The player has guessed __ correct number(s) and its correct position. 
+    * The player has guessed __ correct number(s) in the correct position. 
     * The player's guess was incorrect. 
-* The feedback will not indicate which numbers it is referring to
-* For example, if the secret code is 4556 and the players guesses 4357 the feedback for that guess would be: "The player has guessed 2 correct numbers and their correct position. 
+* The feedback will not directly indicate which numbers are correct.
+* For example, if the secret code is 4556 and the players guesses 4357 the feedback for that guess would be: "The player has guessed 2 correct numbers in the correct position. 
 * One must use logical deduction to determine the secret code. 
 * A player who guesses the secret code by their tenth attempt will win!
 ## Live Site
@@ -33,15 +33,18 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 ## User Stories
 * As a user I want to be able to read the instructions so I can learn how to play the game.
 * As a user I want the computer to randomly generate a 4 number code so that I can try to deduce it.
-* As as user I want to be able to select numbers and create a four number combination guesses.
+* As as user I want to be able to select numbers and create a four number combination guess attempt.
 * As a user I want to be able to undo my guesses before I submit them.
 * As a user I want to be able to submit my guess to check against the secret hidden combination 
-* As a user I want to get feedback information about my guess so I can inform my next guess. Was one of my numbers correct? Was one of my numbers correct and in the right position? 
+* As a user I want to get feedback information about my guess so I can inform my next guess. 
+    * Was one of my numbers correct? 
+    * Was one of my numbers correct and in the right position? 
 * As a user I want have ten chances to deduce the secret code.
 * As a user I want to be able to see how many guess attempts remain.
 * As a user I want to be able to forfeit and see the secret code to better understand the game.
 * As user I want to see if I have won or lost
 * As a user I want to be able to make the game easier or harder for children or advanced users. 
+* As a user I want to be able to track my score and play against others
 
 ## MVP
 * Detailed instructions 
@@ -51,13 +54,16 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * Show secret code after win/lose 
 ## Stretch Goals
 - Change numbers to color elements (ROYGBIV)
-- Change feedback responses to colored element (red pegs signify right number and right position, white pegs signify just right number. For example, if the secret code is 4556 and the players guesses 5357 the feedback for that guess would be one red peg and one white peg.)
-- Add undo option to remove guesses within a turn
+- Change feedback responses to colored element 
+    * red pegs signify right number and right position
+    * white pegs signify just right number 
+    * For example, if the secret code is 4556 and the players guesses 5357 the feedback for that guess would be one red peg and one white peg
+- Add undo option to remove guesses within that turn
 - Add more levels, easier (less numbers no duplicates) and harder (more numbers)
-- Add ability to see code before game is over (automatic loss)
+- Add ability to see code before game is over (automatic loss/forfeit)
 - Add animations
 - Ability to keep score (two player game) 
-- Add turn timer
+- Add a turn timer
 
 
 ## Sprints
@@ -68,6 +74,7 @@ Wed:
 * review React
 
 Thurs & Fri: 
+* hit API
 * make wireframes and conceptualize components 
 * create game components 
 * hit API
