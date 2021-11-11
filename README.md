@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Mastermind2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Mastermind is a deductive reasoning game. The player's goal is to correctly identify the secret number combination code. Every guess the player attempts will be followed by feedback from the computer whether the user guessed a number correctly and/or if it was in the correct position. The player's task is to analyze the feedback and deduce the secret code. Ten guess attempts will be given.  
+## Game Rules
+* At the start of the game the computer will randomly select a combination code of four different numbers. 
+* The possible numbers are 0, 1, 2, 3, 4, 5, 6, 7. Duplicates are allowed, for example: 3389 or 7567.
+* The player has 10 attempts to determine the secret code.
+* Each guess attempt will be given feedback on how many numbers are correct and/or how many numbers correct and in the correct position or none correct. 
+* In this version of Mastermind, Red pegs signify right number and right position, while white pegs signify right number, wrong position. 
+* For example, if the secret code is 4556 and the players guesses 5357 the feedback for that guess would be one red peg and one white peg. It would not indicate which numbers corresponded to those pegs. 
+* One must use logical deduction to determine the secret code. 
+* A player who guesses the secret number combination code by their 10th attempt will win!
+## Live Site
+* link
+* pics of site 
 
-## Available Scripts
+## Installation Instructions
+    * install React
+    * To run Mastermind2.0 fork and clone this repo 
+    * in your terminal cd into the new directory
+    * type $ npm install to install the required dependencies 
+    * type $ npm start to run the React app
+## Technologies Used
+* explanations of the technologies used (including APIs)
+## Wireframes
+## User Stories
+*
+## MVP
+## Stretch Goals
+## Sprints
+## Approach Taken
+## Unsolved Problems
+## Resources Used
 
-In the project directory, you can run:
 
-### `npm start`
+* a RESTful routing chart 
+* database ERDs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
