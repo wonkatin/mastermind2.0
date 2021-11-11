@@ -14,9 +14,6 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * For example, if the secret code is 4556 and the players guesses 4357 the feedback for that guess would be: "The player has guessed 2 correct numbers in the correct position. 
 * One must use logical deduction to determine the secret code. 
 * A player who guesses the secret code by their tenth attempt will win!
-## Live Site
-* link
-* pics of site 
 
 ## Installation Instructions
 * make sure you have installed React
@@ -26,6 +23,10 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
     >`$ npm install` 
 * to run the React app: 
     >`$ npm start` 
+
+## Live Site
+* link
+* pics of site 
 
 ## Technologies Used
 * explanations of the technologies used (including APIs)
@@ -90,6 +91,7 @@ Sun:
 Mon:
 
 ## Approach Taken
+
 ## Unsolved Problems
 ## Resources Used
 
