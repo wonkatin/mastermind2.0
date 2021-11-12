@@ -15,6 +15,10 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * One must use logical deduction to determine the secret code. 
 * A player who guesses the secret code by their tenth attempt will win!
 
+## Live Site
+* link
+* pics of site 
+
 ## Installation Instructions
 * make sure you have Node installed 
 * To run Mastermind2.0 fork and clone this repo 
@@ -24,13 +28,11 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * to run the React app: 
     >`$ npm start` 
 
-## Live Site
-* link
-* pics of site 
-
 ## Technologies Used
 * explanations of the technologies used (including APIs)
-## Wireframes
+
+## Approach Taken
+
 ## User Stories
 * As a user I want to be able to read the instructions so I can learn how to play the game.
 * As a user I want the computer to randomly generate a 4 number code so that I can try to deduce it.
@@ -53,6 +55,14 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * Ability to submit a guess and receive feedback about the guess 
 * Ten chances to win
 * Show secret code after win/lose 
+
+## Wireframes
+![welcome-wireframe](./public/wireframes/welcome.png)
+![instructions-wireframe](./public/wireframes/instructions.png)
+![game-wireframe](./public/wireframes/game.png)
+![game-play-wireframe](./public/wireframes/gameplay.png)
+![win-wireframe](./public/wireframes/win.png)
+![game-over-wireframe](./public/wireframes/gameover.png)
 ## Stretch Goals
 - Change numbers to color elements (Red, Orange, Yellow, Green, Blue, Indigo, Violet and White)
 - Change feedback responses to colored element 
@@ -89,8 +99,6 @@ Sat:
 Sun: 
 
 Mon:
-
-## Approach Taken
 
 ## Unsolved Problems
 ## Resources Used
