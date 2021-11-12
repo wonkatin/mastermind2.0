@@ -84,15 +84,17 @@ Wed:
 * get feedback about previous version of the game 
 * review React
 
-Thurs & Fri: 
+Thurs:
 * hit API
 * make wireframes and conceptualize components 
-* create game components 
-* hit API
-* create game state and event handlers 
 * update sprints 
+
+Fri:
+* create game components 
+* create game state and event handlers 
 * add API info to Readme
 * work on Readme more 
+* update sprints 
 
 Sat: 
 * style game components
