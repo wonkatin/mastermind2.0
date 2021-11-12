@@ -1,4 +1,3 @@
-import './App.css';
 import { useState, useEffect } from 'react'
 import SecretCode from './components/SecretCode'
 
@@ -33,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="App game">
+    <div className="game">
       <SecretCode randomNums={randomNums}/>
     </div>
   );
