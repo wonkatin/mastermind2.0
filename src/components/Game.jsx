@@ -5,15 +5,6 @@ export default function Game() {
 
     useEffect(() => {
         getRandomNums()
-        // fetch("https://www.random.org/integers/?num=4&min=0&max=7&col=1&base=10&format=plain&rnd=new")
-        //     .then((response) => {
-        //         console.log(response)
-        //         return response.text()
-        //     }).then((html) => {
-        //         console.log(html[0])
-        //     }).catch((error) => {
-        //         console.log(error)
-        //     })
     }, [])
 
     const getRandomNums = async() => {
