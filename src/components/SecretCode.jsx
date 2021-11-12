@@ -8,6 +8,7 @@ export default function SecretCode(props) {
                 key={index}
                 number={randomNum}
                 default= "?"
+                color="white"
             />
         )
     })

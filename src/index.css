@@ -19,7 +19,7 @@ code {
 .secret {
   display: flex;
 }
-.number {
+.number-element{
   display: flex;
   justify-content: center;
   align-items: center;
