@@ -54,7 +54,7 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * Ten chances to win
 * Show secret code after win/lose 
 ## Stretch Goals
-- Change numbers to color elements (ROYGBIV)
+- Change numbers to color elements (Red, Orange, Yellow, Green, Blue, Indigo, Violet and White)
 - Change feedback responses to colored element 
     * red pegs signify right number and right position
     * white pegs signify just right number 
