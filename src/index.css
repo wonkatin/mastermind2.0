@@ -47,6 +47,12 @@ code {
   display: flex;
   align-items: center;
 }
+.submit {
+  color: white;
+}
+.submit:hover {
+  cursor: pointer;
+}
 .secret-container {
   display: flex;
   align-items: center;

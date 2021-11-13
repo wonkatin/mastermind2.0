@@ -21,15 +21,14 @@ function App() {
     console.log("secretcode: " + randomNums)
   }, [randomNums])
 
-  useEffect(() => {
-    console.log(clickedOption)
-    updateGuess()
-    console.log(guess)
-  }, [clickedOption])
+  // useEffect(() => {
+  //   console.log(clickedOption)
+  //   // updateGuess()
+  // }, [clickedOption])
+  console.log(clickedOption)
+  console.log(guess)
+  console.log(row)
 
-  const updateGuess = () => {
-    setGuess(guess + 1)
-  }
   // Access API for random number generator
   const getRandomNums = async() => {
       try {
@@ -101,12 +100,15 @@ function App() {
             options={options}
             setClickedOption={setClickedOption}
             guess={guess}
+            setGuess={setGuess}
           />
         </div>
         <div className="game-board-container">
           <GameBoard 
             numOfElements={level}
             gameBoardRows={gameBoardRows}
+            row={row}
+            setRow={setRow}
           />
         </div>
         <div className="secret-container">

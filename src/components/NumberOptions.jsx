@@ -7,7 +7,13 @@ export default function NumberOptions(props) {
         const handleClick = () => {
             console.log("click happens")
             props.setClickedOption([{value: option.value, color: option.color}])
+            updateGuess()
         }
+        
+        const updateGuess = () => {
+             props.setGuess(props.guess + 1)
+        }
+
         return (
             <NumberElement
                 key={index}
@@ -18,7 +24,7 @@ export default function NumberOptions(props) {
             />
         )
     })
-    // console.log(options)
+   
     return (
         <div className="number-options">
             {options}
