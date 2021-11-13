@@ -2,7 +2,7 @@ import GameBoardRow from "./GameBoardRow";
 
 
 export default function GameBoard(props) {
-    const rows = Array.from(Array(props.gameBoardRows)).map((index) => {
+    const rows = Array.from(Array(props.gameBoardRows)).map((row, index) => {
         return (
             <GameBoardRow
                 key={index}
@@ -11,7 +11,7 @@ export default function GameBoard(props) {
         )
     })
     // fill(<GameBoardRow key={index} numOfElements={props.numOfElements}/>) does not give unique key
-    console.log(rows)
+    // console.log(rows)
 
     return (
         <div className="game-board">

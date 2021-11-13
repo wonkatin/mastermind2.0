@@ -6,11 +6,19 @@ import SecretCode from './components/SecretCode'
 function App() {
   // secret code in state
   const [randomNums, setRandomNums] = useState([])
-  
+  const [clickedOption, setClickedOption] = useState([])
 
   useEffect(() => {
       getRandomNums()
   }, [])
+
+  useEffect(() => {
+    console.log("secretcode: " + randomNums)
+  }, [randomNums])
+
+  useEffect(() => {
+    console.log(clickedOption)
+  }, [clickedOption])
 
   // Access API for random number generator
   const getRandomNums = async() => {
@@ -33,11 +41,7 @@ function App() {
           console.log(error)
       }
   }
-  console.log("secretcode: " + randomNums)
-  // function for handleClick
-  const handleClick = (e) => {
-    console.log("click happens")
-  }
+  
   //game options
   const options = [
     {
@@ -85,7 +89,7 @@ function App() {
         <div className="number-options-container">
           <NumberOptions 
             options={options}
-            handleClick={handleClick}
+            setClickedOption={setClickedOption}
           />
         </div>
         <div className="game-board-container">

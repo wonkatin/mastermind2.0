@@ -1,7 +1,7 @@
 import NumberElement from './NumberElement'
 
 export default function GameBoardRow(props) {
-    const elements = Array.from(Array(props.numOfElements)).map((index) => {
+    const elements = Array.from(Array(props.numOfElements)).map((element, index) => {
         return(
             <NumberElement 
                 key={index}
