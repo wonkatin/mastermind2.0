@@ -13,6 +13,8 @@ export default function SecretCode(props) {
         )
     })
     return (
-        <div className="secret">{secretCode}</div>
+        <div className="secret">
+            {secretCode}
+        </div>
     )
 }

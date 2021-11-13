@@ -4,6 +4,10 @@ export default function NumberElement(props) {
         backgroundColor: props.color
     }
     return (
-        <div className="number-element" style={numberColor}>{props.default}</div>
+        <div className="number-element" style={numberColor}>
+            <div className="number-text-container">
+                {props.default}
+            </div>
+        </div>
     )
 }
