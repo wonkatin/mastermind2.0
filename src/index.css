@@ -22,25 +22,32 @@ code {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 10fr 1fr
 }
+.number-options-container {
+  display: flex;
+  align-items: center;
+}
+.number-options {
+  display: flex;
+}
 .game-board {
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(10, 1fr)
 }
 .row {
   display: flex;
-  /* color: white; */
+  align-items: center;
 }
 .secret-container {
-  height: 1fr;
   display: flex;
   align-items: center;
+
 }
 .secret {
   display: flex;
-  /* height: 100%; */
+ 
 }
-
 .number-element{
   display: flex;
   justify-content: center;
@@ -49,7 +56,7 @@ code {
   /* max-width: 40px; */
   /* max-height: 40px; */
   margin: 5px;
-  background-color: white;
+  /* background-color: white; */
 }
 .number-text-container {
   text-align: center;
@@ -58,4 +65,28 @@ code {
 }
 .hidden {
   display: none
+}
+.red {
+  background-color: #fe2a4e;
+}
+.orange {
+  background-color: #febb2a;
+}
+.yellow {
+  background-color: #defe2a;
+}
+.green {
+  background-color: #5fde42;
+}
+.blue {
+  background-color: #2adefe;
+}
+.purple {
+  background-color: #8b54fe;
+}
+.pink {
+  background-color: #ff00ea;
+}
+.white {
+  background-color: white;
 }

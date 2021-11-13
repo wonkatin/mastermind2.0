@@ -1,12 +1,12 @@
 
 export default function NumberElement(props) {
-    const numberColor = {
-        backgroundColor: props.color
-    }
+    // const numberColor = {
+    //     backgroundColor: props.color
+    // }
     return (
-        <div className="number-element" style={numberColor}>
+        <div className={`number-element ${props.color}`}>
             <div className="number-text-container">
-                {props.default}
+                {props.value}
             </div>
         </div>
     )

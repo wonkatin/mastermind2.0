@@ -7,6 +7,7 @@ export default function GameBoardRow(props) {
                 key={index}
                 number=""
                 color="white"
+                value=""
             />
         )
     })

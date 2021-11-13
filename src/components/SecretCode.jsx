@@ -7,8 +7,8 @@ export default function SecretCode(props) {
             <NumberElement
                 key={index}
                 number={randomNum}
-                default= "?"
                 color="white"
+                value="?"
             />
         )
     })

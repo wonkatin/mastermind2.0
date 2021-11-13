@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import GameBoard from './components/GameBoard'
+import NumberOptions from './components/NumberOptions'
 import SecretCode from './components/SecretCode'
 
 function App() {
@@ -31,14 +32,54 @@ function App() {
           console.log(error)
       }
   }
+  //options
+  const options = [
+    {
+      value: 0,
+      color: "red"
+    },
+    {
+      value: 1,
+      color: "orange"
+    },
+    {
+      value: 2,
+      color: "yellow"
+    },
+    {
+      value: 3,
+      color: "green"
+    },
+    {
+      value: 4,
+      color: "blue"
+    },
+    {
+      value: 5,
+      color: "purple"
+    },
+    {
+      value: 6,
+      color: "pink"
+    },
+    {
+      value: 7,
+      color: "white"
+    },
+  ]
   // number of rows in the game board will always be 10
   const gameBoardRows = 10
+  // difficulty level
   const level = 4
   return (
     <div className="game">
       <div className="game-container">
-        <div></div>
-        <div>
+        <div className="number-options-container">
+          <NumberOptions 
+            options={options}
+          />
+        </div>
+        <div className="game-board-container">
           <GameBoard 
             numOfElements={level}
             gameBoardRows={gameBoardRows}
