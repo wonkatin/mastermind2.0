@@ -15,12 +15,17 @@ code {
 .game {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+.title {
+  color: white;
+  font-size: 2em;
 }
 .game-container {
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 10fr 1fr
+  grid-template-rows: 1fr 1fr 10fr 1fr
 }
 .number-options-container {
   display: flex;

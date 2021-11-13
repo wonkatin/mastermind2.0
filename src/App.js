@@ -6,6 +6,7 @@ import SecretCode from './components/SecretCode'
 function App() {
   // secret code in state
   const [randomNums, setRandomNums] = useState([])
+  
 
   useEffect(() => {
       getRandomNums()
@@ -32,7 +33,8 @@ function App() {
           console.log(error)
       }
   }
-  //options
+  console.log(randomNums)
+  //game options
   const options = [
     {
       value: 0,
@@ -74,6 +76,7 @@ function App() {
   return (
     <div className="game">
       <div className="game-container">
+        <div className="title">Mastermind</div>
         <div className="number-options-container">
           <NumberOptions 
             options={options}

@@ -4,6 +4,8 @@ NumberElement - box or future other shape that the number lives in, same across 
 NumberList - selection of numbers to click
 GameBoardRow - that has NumberElements 
 Secret Code
+
+
 SubmitButton - moves along rows 
 FeedbackZone - replaces SubmitButton
 FeedbackElements - initially a message, then red/white pegs
