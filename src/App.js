@@ -6,7 +6,12 @@ import SecretCode from './components/SecretCode'
 function App() {
   // secret code in state
   const [randomNums, setRandomNums] = useState([])
+  // track the clicked option in state
   const [clickedOption, setClickedOption] = useState([])
+  // track which row in state
+  const [row, setRow] = useState(0)
+  // track which guess is being played 
+  const [guess, setGuess] = useState(0)
 
   useEffect(() => {
       getRandomNums()
@@ -18,8 +23,13 @@ function App() {
 
   useEffect(() => {
     console.log(clickedOption)
+    updateGuess()
+    console.log(guess)
   }, [clickedOption])
 
+  const updateGuess = () => {
+    setGuess(guess + 1)
+  }
   // Access API for random number generator
   const getRandomNums = async() => {
       try {
@@ -90,6 +100,7 @@ function App() {
           <NumberOptions 
             options={options}
             setClickedOption={setClickedOption}
+            guess={guess}
           />
         </div>
         <div className="game-board-container">
@@ -104,6 +115,7 @@ function App() {
       </div>
     </div>
   );
+  
 }
 
 export default App;
