@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import GameBoard from './components/GameBoard'
 import SecretCode from './components/SecretCode'
 
 function App() {
@@ -30,10 +31,23 @@ function App() {
           console.log(error)
       }
   }
-
+  // number of rows in the game board will always be 10
+  const gameBoardRows = 10
+  const level = 4
   return (
     <div className="game">
-      <SecretCode randomNums={randomNums}/>
+      <div className="game-container">
+        <div></div>
+        <div>
+          <GameBoard 
+            numOfElements={level}
+            gameBoardRows={gameBoardRows}
+          />
+        </div>
+        <div className="secret-container">
+          <SecretCode randomNums={randomNums}/>
+        </div>
+      </div>
     </div>
   );
 }

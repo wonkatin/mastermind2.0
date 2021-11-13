@@ -16,17 +16,45 @@ code {
   display: flex;
   flex-direction: column;
 }
+.game-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 1fr
+}
+.game-board {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr)
+}
+.row {
+  display: flex;
+  /* color: white; */
+}
+.secret-container {
+  height: 1fr;
+  display: flex;
+  align-items: center;
+}
 .secret {
   display: flex;
+  /* height: 100%; */
 }
+
 .number-element{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  padding: 4px;
+  /* max-width: 40px; */
+  /* max-height: 40px; */
   margin: 5px;
   background-color: white;
+}
+.number-text-container {
+  text-align: center;
+  height: 20px;
+  width: 20px;
 }
 .hidden {
   display: none
