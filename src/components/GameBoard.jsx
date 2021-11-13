@@ -6,9 +6,10 @@ export default function GameBoard(props) {
         return (
             <GameBoardRow
                 key={index}
+                rowIndex={index}
                 numOfElements={props.numOfElements}
-                row={props.row}
-                setRow={props.setRow}
+                rowCount={props.rowCount}
+                setRowCount={props.setRowCount}
             />
         )
     })

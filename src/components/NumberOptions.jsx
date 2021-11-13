@@ -7,11 +7,11 @@ export default function NumberOptions(props) {
         const handleClick = () => {
             console.log("click happens")
             props.setClickedOption([{value: option.value, color: option.color}])
-            updateGuess()
+            updateGuessCount()
         }
         
-        const updateGuess = () => {
-             props.setGuess(props.guess + 1)
+        const updateGuessCount = () => {
+             props.setGuessCount(props.guessCount + 1)
         }
 
         return (

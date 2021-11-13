@@ -1,9 +1,9 @@
 export default function SubmitButton(props) {
     const handleSubmit = () => {
-        updateRow()
+        updateRowCount()
     }
-    const updateRow = () => {
-        props.setRow(props.row +1)
+    const updateRowCount = () => {
+        props.setRowCount(props.rowCount +1)
     }
     return (
         <div className="submit" onClick={handleSubmit}>
