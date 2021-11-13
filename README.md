@@ -91,16 +91,18 @@ Thurs:
 
 Fri:
 * create game components 
-* create game state and event handlers 
-* add API info to Readme
-* work on Readme more 
 * update sprints 
 
 Sat: 
-* style game components
+* add event handlers
+* add state variables
+
 Sun: 
+* add API info to Readme
+* work on Readme more 
 
 Mon:
+* style game 
 
 ## Unsolved Problems
 ## Resources Used

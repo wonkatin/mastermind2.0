@@ -33,7 +33,8 @@ function App() {
           console.log(error)
       }
   }
-  console.log(randomNums)
+  console.log("secretcode: " + randomNums)
+  
   //game options
   const options = [
     {
@@ -69,10 +70,11 @@ function App() {
       color: "white"
     },
   ]
-  // number of rows in the game board will always be 10
+  // number of rows in the game
   const gameBoardRows = 10
   // difficulty level
   const level = 4
+  
   return (
     <div className="game">
       <div className="game-container">

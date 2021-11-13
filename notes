@@ -1,7 +1,8 @@
 components
 
 NumberElement - box or future other shape that the number lives in, same across site
-NumberList - selection of numbers to click
+NumberOptions - selection of numbers to click
+GameBoard
 GameBoardRow - that has NumberElements 
 Secret Code
 
@@ -9,8 +10,12 @@ Secret Code
 SubmitButton - moves along rows 
 FeedbackZone - replaces SubmitButton
 FeedbackElements - initially a message, then red/white pegs
+NewGameButton
 
-variables 
-level or num of NumberElements in a GameBoardRow
-always 10 rows
+
+variables
+randomnumber - secret code from API
+level - num of NumberElements in a GameBoardRow
+rows - 10
+count - count clicks? 
 

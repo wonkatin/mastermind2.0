@@ -8,6 +8,7 @@ export default function NumberOptions(props) {
                 key={index}
                 value={option.value}
                 color={option.color}
+                //event listener
             />
         )
     })
