@@ -34,6 +34,9 @@ code {
 .number-options {
   display: flex;
 }
+.number-options .number-element:hover {
+  cursor: pointer;
+}
 .game-board {
   height: 100%;
   display: grid;

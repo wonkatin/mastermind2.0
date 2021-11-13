@@ -34,7 +34,10 @@ function App() {
       }
   }
   console.log("secretcode: " + randomNums)
-  
+  // function for handleClick
+  const handleClick = (e) => {
+    console.log("click happens")
+  }
   //game options
   const options = [
     {
@@ -82,6 +85,7 @@ function App() {
         <div className="number-options-container">
           <NumberOptions 
             options={options}
+            handleClick={handleClick}
           />
         </div>
         <div className="game-board-container">
