@@ -13,6 +13,7 @@ function App() {
   // track which guess is being played 
   const [guessCount, setGuessCount] = useState(0)
 
+
   useEffect(() => {
       getRandomNums()
   }, [])
@@ -21,13 +22,13 @@ function App() {
     console.log("secretcode: " + randomNums)
   }, [randomNums])
 
-  // useEffect(() => {
-  //   console.log(clickedOption)
-  //   // updateGuess()
-  // }, [clickedOption])
-  console.log("I clicked: " + clickedOption)
-  console.log("guess count: " + guessCount)
-  console.log("row count: " + rowCount)
+  useEffect(() => {
+    console.log(clickedOption)
+    console.log("guess count: " + guessCount)
+    console.log("row count: " + rowCount)
+
+  }, [clickedOption, guessCount, rowCount])
+
 
   // Access API for random number generator
   const getRandomNums = async() => {
@@ -98,8 +99,10 @@ function App() {
         <div className="number-options-container">
           <NumberOptions 
             options={options}
+            clickedOption={clickedOption}
             setClickedOption={setClickedOption}
             guessCount={guessCount}
+            // rowCount={rowCount}
             setGuessCount={setGuessCount}
           />
         </div>
@@ -108,7 +111,10 @@ function App() {
             numOfElements={level}
             gameBoardRows={gameBoardRows}
             rowCount={rowCount}
+            guessCount={guessCount}
             setRowCount={setRowCount}
+            setGuessCount={setGuessCount}
+            clickedOption={clickedOption}
           />
         </div>
         <div className="secret-container">
