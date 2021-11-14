@@ -15,8 +15,8 @@ function App() {
 
   // track which guess is being played 
   const [guessCount, setGuessCount] = useState(0)
-  // guess code
-  const [guess, setGuess] = useState(false)
+  // // guess code
+  // const [guess, setGuess] = useState([])
   
   // number of rows in the game
   const gameBoardRows = 10
@@ -142,11 +142,12 @@ function App() {
         <div className="number-options-container">
           <NumberOptions 
             gameBoard={gameBoard}
-            options={options}
-            guessCount={guessCount}
-            rowCount={rowCount}
-            setGuessCount={setGuessCount}
             level={level}
+            options={options}
+            rowCount={rowCount}
+            guessCount={guessCount}
+            setGuessCount={setGuessCount}
+            // setGuess={setGuess}
           />
         </div>
         <div className="game-board-container">

@@ -13,7 +13,6 @@ export default function GameBoard(props) {
                 guessCount={props.guessCount}
                 setRowCount={props.setRowCount}
                 setGuessCount={props.setGuessCount}
-                // clickedOption={props.clickedOption}
                 randomNums={props.randomNums}
             />
         )

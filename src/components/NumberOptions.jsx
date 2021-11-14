@@ -19,7 +19,6 @@ export default function NumberOptions(props) {
                 key={index}
                 value={option.value}
                 color={option.color}
-                // setClickedOption={props.setClickedOption}
                 handleClick={handleClick}
                 level={props.level}
                 guessCount={props.guessCount}

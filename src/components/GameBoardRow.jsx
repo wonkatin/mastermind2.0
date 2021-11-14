@@ -10,9 +10,6 @@ export default function GameBoardRow(props) {
                 key={index}
                 elementIndex={index}
                 rowIndex={props.rowIndex}
-                // number=""
-                // color="white"
-                // value=""
             />
         )
     })
@@ -23,14 +20,14 @@ export default function GameBoardRow(props) {
                 { (props.rowIndex === props.rowCount) ? 
                     <SubmitButton 
                         gameBoard={props.gameBoard}
-                        numOfElements={props.numOfElements}
+                        level={props.numOfElements}
                         gameBoardRows={props.gameBoardRows}
                         rowCount={props.rowCount}
                         guessCount={props.guessCount}
                         setRowCount={props.setRowCount}
                         setGuessCount={props.setGuessCount}
-                        // guess={guess}
-                        // solution={solution}
+                        guess={props.gameBoard[props.rowCount]}
+                        solution={props.randomNums}
                     /> 
                      
                     :
