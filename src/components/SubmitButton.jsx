@@ -23,9 +23,21 @@ export default function SubmitButton(props) {
     const updateRowCount = () => {
         props.setRowCount(props.rowCount +1)
     }
-    return (
-        <div className="submit" onClick={handleSubmit}>
-            Submit
-        </div>
-    )
+
+    if (props.level == props.guessCount) {
+
+        return (
+            <div className="submit" onClick={handleSubmit}>
+                Submit
+            </div>
+        )
+    } else {
+        return (
+            // add onclick method telling user to pick more numbers
+            <div className="submit">
+                Submit
+            </div>
+        )
+    }
+
 }

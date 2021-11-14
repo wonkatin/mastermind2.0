@@ -38,6 +38,7 @@ function App() {
       // console.log(innerArray)
       const gameBoardArray = []
       for (let i = 0; i < gameBoardRows; i ++) {
+        // make a copy of the array 10 x
         gameBoardArray.push([...innerArray])
       }
       setGameBoard(gameBoardArray)
