@@ -53,7 +53,11 @@ export default function GameBoardRow(props) {
         return (
             <div className="row">
                 {elements}
+                { (props.feedback[props.rowIndex][0] === 0 && props.feedback[props.rowIndex][1] === 0) ?
+                <div className="feedback-zone">incorrect </div>
+                :
                 <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+                }
             </div>
         )
     } else {
