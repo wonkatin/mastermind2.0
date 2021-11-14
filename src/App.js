@@ -15,9 +15,10 @@ function App() {
 
   // track which guess is being played 
   const [guessCount, setGuessCount] = useState(0)
-  // // guess code
-  // const [guess, setGuess] = useState([])
-  
+
+  // feedback array
+  const [feedback, setFeedback] = useState([])
+
   // number of rows in the game
   const gameBoardRows = 10
 
@@ -25,7 +26,9 @@ function App() {
   const level = 4
 
   useEffect(() => {
+      // get secret code
       getRandomNums()
+      // set gameboard state
       let innerArray = []
       for(let i = 0; i < level; i ++) {
         innerArray.push(
@@ -42,8 +45,15 @@ function App() {
         gameBoardArray.push([...innerArray])
       }
       setGameBoard(gameBoardArray)
+      // set feedback state
+      const feedbackArray = []
+      const innerFeedback = [0,0]
+      for (let i = 0; i < gameBoardRows; i ++) {
+        // make a copy of the array 10 x
+        feedbackArray.push([...innerFeedback])
+      }
+      setFeedback(feedbackArray)
   }, [])
-
 
   useEffect(() => {
     console.log("secretcode: " + randomNums)
@@ -137,6 +147,8 @@ function App() {
         <div className="game-board-container">
           <GameBoard 
             gameBoard={gameBoard}
+            feedback={feedback}
+            // setFeedback={setFeedback}
             numOfElements={level}
             gameBoardRows={gameBoardRows}
             rowCount={rowCount}

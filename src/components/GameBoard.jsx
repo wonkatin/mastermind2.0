@@ -8,6 +8,8 @@ export default function GameBoard(props) {
                 key={index}
                 rowIndex={index}
                 gameBoard={props.gameBoard}
+                feedback={props.feedback}
+                // setFeedback={props.setFeedback}
                 numOfElements={props.numOfElements}
                 rowCount={props.rowCount}
                 guessCount={props.guessCount}

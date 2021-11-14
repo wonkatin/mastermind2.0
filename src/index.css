@@ -56,6 +56,9 @@ code {
 .submit:hover {
   cursor: pointer;
 }
+.feedback-zone {
+  color: white
+}
 .secret-container {
   display: flex;
   align-items: center;

@@ -11,7 +11,7 @@ export default function NumberElement(props) {
         )
     } else {
         return (
-            <div>help</div>
+            <div>loading...</div>
         )
     }
 
