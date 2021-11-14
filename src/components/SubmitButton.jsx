@@ -3,6 +3,7 @@ export default function SubmitButton(props) {
     
     console.log(props.solution)
     console.log(props.guess)
+
     const tryCode = (arr1, arr2) => {
        for (let i = 0; i < props.level; i ++){
             if(arr1.includes(arr2[i])) {
@@ -17,7 +18,7 @@ export default function SubmitButton(props) {
     const handleSubmit = () => {
         updateRowCount()
         props.setGuessCount(0)
-        // tryCode(props.guess, props.solution)
+        tryCode(props.guess, props.solution)
     }
     const updateRowCount = () => {
         props.setRowCount(props.rowCount +1)

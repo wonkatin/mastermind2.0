@@ -26,36 +26,19 @@ function App() {
 
   useEffect(() => {
       getRandomNums()
-      // let innerArray = []
-      // for(let i = 0; i < level; i ++) {
-      //   innerArray.push(
-      //     {
-      //       value: "",
-      //       color: "white"
-      //     }
-      //   )
-      // }
-      // console.log(innerArray)
-      const gameBoardArray = []
-      for (let i = 0; i < gameBoardRows; i ++) {
-        gameBoardArray.push([
-          {
-            value: "",
-            color: "white"
-          },
-          {
-            value: "",
-            color: "white"
-          },
-          {
-            value: "",
-            color: "white"
-          },
+      let innerArray = []
+      for(let i = 0; i < level; i ++) {
+        innerArray.push(
           {
             value: "",
             color: "white"
           }
-        ])
+        )
+      }
+      // console.log(innerArray)
+      const gameBoardArray = []
+      for (let i = 0; i < gameBoardRows; i ++) {
+        gameBoardArray.push([...innerArray])
       }
       setGameBoard(gameBoardArray)
   }, [])

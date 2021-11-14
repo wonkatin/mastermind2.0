@@ -2,6 +2,15 @@ import NumberElement from './NumberElement'
 import SubmitButton from './SubmitButton'
 
 export default function GameBoardRow(props) {
+    
+    const array = props.gameBoard[props.rowCount]
+    let guessArray = []
+
+    // do not forget to check the useeffect
+    if(props.gameBoard) {
+        guessArray = array.map(el => el.value)
+    }
+
     const elementsArray = Array.from(Array(props.numOfElements))
     const elements = elementsArray.map((element, index) => {
         return(
@@ -26,7 +35,7 @@ export default function GameBoardRow(props) {
                         guessCount={props.guessCount}
                         setRowCount={props.setRowCount}
                         setGuessCount={props.setGuessCount}
-                        guess={props.gameBoard[props.rowCount]}
+                        guess={guessArray}
                         solution={props.randomNums}
                     /> 
                      
