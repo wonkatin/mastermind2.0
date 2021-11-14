@@ -7,13 +7,14 @@ export default function GameBoard(props) {
             <GameBoardRow
                 key={index}
                 rowIndex={index}
+                gameBoard={props.gameBoard}
                 numOfElements={props.numOfElements}
                 rowCount={props.rowCount}
                 guessCount={props.guessCount}
                 setRowCount={props.setRowCount}
                 setGuessCount={props.setGuessCount}
-                clickedOption={props.clickedOption}
-                gameBoard={props.gameBoard}
+                // clickedOption={props.clickedOption}
+                randomNums={props.randomNums}
             />
         )
     })

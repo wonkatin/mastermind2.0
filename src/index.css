@@ -34,8 +34,11 @@ code {
 .number-options {
   display: flex;
 }
-.number-options .number-element:hover {
+.hover:hover {
   cursor: pointer;
+}
+.default {
+  cursor: default;
 }
 .game-board {
   height: 100%;

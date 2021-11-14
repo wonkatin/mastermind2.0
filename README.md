@@ -98,11 +98,12 @@ Sat:
 * add state variables
 
 Sun: 
-* add API info to Readme
-* work on Readme more 
+* GAME LOGIC 🍦🍦🍦
 
 Mon:
 * style game 
+* add API info to Readme
+* work on Readme more 
 
 ## Unsolved Problems
 ## Resources Used

@@ -15,7 +15,8 @@ function App() {
 
   // track which guess is being played 
   const [guessCount, setGuessCount] = useState(0)
-
+  // guess code
+  const [guess, setGuess] = useState(false)
   
   // number of rows in the game
   const gameBoardRows = 10
@@ -25,35 +26,57 @@ function App() {
 
   useEffect(() => {
       getRandomNums()
-      let innerArray = []
-      for(let i = 0; i < level; i ++) {
-        innerArray.push(
+      // let innerArray = []
+      // for(let i = 0; i < level; i ++) {
+      //   innerArray.push(
+      //     {
+      //       value: "",
+      //       color: "white"
+      //     }
+      //   )
+      // }
+      // console.log(innerArray)
+      const gameBoardArray = []
+      for (let i = 0; i < gameBoardRows; i ++) {
+        gameBoardArray.push([
+          {
+            value: "",
+            color: "white"
+          },
+          {
+            value: "",
+            color: "white"
+          },
+          {
+            value: "",
+            color: "white"
+          },
           {
             value: "",
             color: "white"
           }
-        )
-      }
-      console.log(innerArray)
-      const gameBoardArray = []
-      for (let i = 0; i < gameBoardRows; i ++) {
-        gameBoardArray.push(innerArray)
+        ])
       }
       setGameBoard(gameBoardArray)
-      // console.log(gameBoardArray)
   }, [])
+
 
   useEffect(() => {
     console.log("secretcode: " + randomNums)
   }, [randomNums])
 
-  // useEffect(() => {
-  //   console.log(clickedOption)
-  //   console.log("guess count: " + guessCount)
-  //   console.log("row count: " + rowCount)
+  useEffect(() => {
+    console.log("guess count: " + guessCount)
+  }, [guessCount])
 
-  // }, [clickedOption, guessCount, rowCount])
+  useEffect(() => {
+    console.log("row count: " + rowCount)
+  }, [rowCount])
 
+  useEffect(() => {
+    console.log(gameBoard)
+
+  }, [gameBoard])
 
   // Access API for random number generator
   const getRandomNums = async() => {
@@ -76,7 +99,7 @@ function App() {
           console.log(error)
       }
   }
-  
+
   //game options
   const options = [
     {
@@ -123,6 +146,7 @@ function App() {
             guessCount={guessCount}
             rowCount={rowCount}
             setGuessCount={setGuessCount}
+            level={level}
           />
         </div>
         <div className="game-board-container">
@@ -134,6 +158,7 @@ function App() {
             guessCount={guessCount}
             setRowCount={setRowCount}
             setGuessCount={setGuessCount}
+            randomNums={randomNums}
           />
         </div>
         <div className="secret-container">

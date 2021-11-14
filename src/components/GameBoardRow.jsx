@@ -2,8 +2,6 @@ import NumberElement from './NumberElement'
 import SubmitButton from './SubmitButton'
 
 export default function GameBoardRow(props) {
-    // console.log(props.clickedOption)
-
     const elementsArray = Array.from(Array(props.numOfElements))
     const elements = elementsArray.map((element, index) => {
         return(
@@ -18,19 +16,21 @@ export default function GameBoardRow(props) {
             />
         )
     })
-    // console.log(elementsArray)
-    // console.log(elements)
-    
     return (
             <div className="row"> 
                  {elements}
 
                 { (props.rowIndex === props.rowCount) ? 
                     <SubmitButton 
+                        gameBoard={props.gameBoard}
+                        numOfElements={props.numOfElements}
+                        gameBoardRows={props.gameBoardRows}
                         rowCount={props.rowCount}
-                        setRowCount={props.setRowCount}
                         guessCount={props.guessCount}
+                        setRowCount={props.setRowCount}
                         setGuessCount={props.setGuessCount}
+                        // guess={guess}
+                        // solution={solution}
                     /> 
                      
                     :
