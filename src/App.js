@@ -6,28 +6,53 @@ import SecretCode from './components/SecretCode'
 function App() {
   // secret code in state
   const [randomNums, setRandomNums] = useState([])
-  // track the clicked option in state
-  const [clickedOption, setClickedOption] = useState([])
+
+  // virtual game board 
+  const [gameBoard, setGameBoard] = useState(false)
+
   // track which row in state
   const [rowCount, setRowCount] = useState(0)
+
   // track which guess is being played 
   const [guessCount, setGuessCount] = useState(0)
 
+  
+  // number of rows in the game
+  const gameBoardRows = 10
+
+  // difficulty level
+  const level = 4
 
   useEffect(() => {
       getRandomNums()
+      let innerArray = []
+      for(let i = 0; i < level; i ++) {
+        innerArray.push(
+          {
+            value: "",
+            color: "white"
+          }
+        )
+      }
+      console.log(innerArray)
+      const gameBoardArray = []
+      for (let i = 0; i < gameBoardRows; i ++) {
+        gameBoardArray.push(innerArray)
+      }
+      setGameBoard(gameBoardArray)
+      // console.log(gameBoardArray)
   }, [])
 
   useEffect(() => {
     console.log("secretcode: " + randomNums)
   }, [randomNums])
 
-  useEffect(() => {
-    console.log(clickedOption)
-    console.log("guess count: " + guessCount)
-    console.log("row count: " + rowCount)
+  // useEffect(() => {
+  //   console.log(clickedOption)
+  //   console.log("guess count: " + guessCount)
+  //   console.log("row count: " + rowCount)
 
-  }, [clickedOption, guessCount, rowCount])
+  // }, [clickedOption, guessCount, rowCount])
 
 
   // Access API for random number generator
@@ -87,38 +112,35 @@ function App() {
       color: "white"
     },
   ]
-  // number of rows in the game
-  const gameBoardRows = 10
-  // difficulty level
-  const level = 4
-  
   return (
     <div className="game">
       <div className="game-container">
         <div className="title">Mastermind</div>
         <div className="number-options-container">
           <NumberOptions 
+            gameBoard={gameBoard}
             options={options}
-            clickedOption={clickedOption}
-            setClickedOption={setClickedOption}
             guessCount={guessCount}
-            // rowCount={rowCount}
+            rowCount={rowCount}
             setGuessCount={setGuessCount}
           />
         </div>
         <div className="game-board-container">
           <GameBoard 
+            gameBoard={gameBoard}
             numOfElements={level}
             gameBoardRows={gameBoardRows}
             rowCount={rowCount}
             guessCount={guessCount}
             setRowCount={setRowCount}
             setGuessCount={setGuessCount}
-            clickedOption={clickedOption}
           />
         </div>
         <div className="secret-container">
-          <SecretCode randomNums={randomNums}/>
+          <SecretCode 
+            gameBoard={gameBoard} 
+            randomNums={randomNums}
+          />
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
-import NumberElement from './NumberElement'
+import NumberElementSecret from './NumberElementSecret'
 
 export default function SecretCode(props) {
     // console.log(props.randomNums)
     const secretCode = props.randomNums.map((randomNum, index) => {
         return (
-            <NumberElement
+            <NumberElementSecret
                 key={index}
                 index={index}
                 number={randomNum}

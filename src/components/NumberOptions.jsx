@@ -1,14 +1,12 @@
-import NumberElement from './NumberElement'
+import NumberElementOption from './NumberElementOption'
 
 export default function NumberOptions(props) {
     
     const options = props.options.map((option, index) => {
         // function for handleClick
         const handleClick = () => {
-            console.log("click happens")
-            props.setClickedOption([{value: option.value, color: option.color}])
+            props.gameBoard[props.rowCount][props.guessCount] = {value: option.value, color: option.color}
             updateGuessCount()
-        
         }
         
         const updateGuessCount = () => {
@@ -16,7 +14,7 @@ export default function NumberOptions(props) {
         }
 
         return (
-            <NumberElement
+            <NumberElementOption
                 key={index}
                 value={option.value}
                 color={option.color}

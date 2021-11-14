@@ -1,6 +1,5 @@
 import GameBoardRow from "./GameBoardRow";
 
-
 export default function GameBoard(props) {
     const rowsArray = Array.from(Array(props.gameBoardRows))
     const rows = rowsArray.map((row, index) => {
@@ -14,6 +13,7 @@ export default function GameBoard(props) {
                 setRowCount={props.setRowCount}
                 setGuessCount={props.setGuessCount}
                 clickedOption={props.clickedOption}
+                gameBoard={props.gameBoard}
             />
         )
     })

@@ -1,11 +1,19 @@
 
 export default function NumberElement(props) {
-
-    return (
-        <div className={`number-element ${props.color}`} onClick={props.handleClick}>
-            <div className="number-text-container">
-                {props.value}
+    if (props.gameBoard) {
+        const gameData = props.gameBoard[props.rowIndex][props.elementIndex]
+        // console.log(data)
+        return (
+            <div className={`number-element ${gameData.color}`} onClick={props.handleClick}>
+                <div className="number-text-container">
+                    {gameData.value}
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    } else {
+        return (
+            <div>help</div>
+        )
+    }
+
+    }
