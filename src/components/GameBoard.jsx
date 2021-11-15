@@ -19,6 +19,8 @@ export default function GameBoard(props) {
                 randomNums={props.randomNums}
                 setWin={props.setWin}
                 win={props.win}
+                setGameOver={props.setGameOver}
+                gameOver={props.gameOver}
             />
         )
     })

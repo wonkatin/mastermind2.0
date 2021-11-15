@@ -77,6 +77,11 @@ function App() {
   }, [gameBoard])
 
   useEffect(() => {
+    console.log(feedback)
+
+  }, [feedback])
+
+  useEffect(() => {
     console.log(win)
 
   }, [win])
@@ -157,7 +162,6 @@ function App() {
           <GameBoard 
             gameBoard={gameBoard}
             feedback={feedback}
-            // setFeedback={setFeedback}
             numOfElements={level}
             gameBoardRows={gameBoardRows}
             rowCount={rowCount}
@@ -167,6 +171,8 @@ function App() {
             randomNums={randomNums}
             setWin={setWin}
             win={win}
+            setGameOver={setGameOver}
+            gameOver={gameOver}
           />
         </div>
         <div className="secret-container">

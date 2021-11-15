@@ -9,7 +9,7 @@ export default function SubmitButton(props) {
     let array1 = [... props.guess]
     let array2 = [... props.solution]
     const tryCode = (arr1, arr2) => {
-
+        // separate the logic so it checks and replaces all exact matches first
         for (let i = 0; i < props.level; i ++){
             if(arr1.includes(arr2[i])) {
                 if (arr2[i] === arr1[i]) {
@@ -33,8 +33,10 @@ export default function SubmitButton(props) {
 
         }
     }
+    console.log(props.feedback)
     console.log(props.rowCount)
     console.log(props.gameBoardRows)
+    console.log(props.rowIndex)
     const handleSubmit = () => {
         tryCode(array1 , array2)
         if (props.feedback[props.rowIndex][1] === 4 ) {
@@ -45,10 +47,9 @@ export default function SubmitButton(props) {
             updateRowCount()
             props.setGuessCount(0)
         } else {
-
+            props.setGameOver(true)
         }
 
-        // props.setGuessCount(0)
        
 
     }

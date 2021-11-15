@@ -37,10 +37,11 @@ export default function GameBoardRow(props) {
             return (
                 <div className="row">
                     {elements}
-
-                        <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
-
-
+                    { (props.feedback[props.rowIndex][0] === 0 && props.feedback[props.rowIndex][1] === 0) ?
+                    <div className="feedback-zone">incorrect </div>
+                    :
+                    <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+                    }
                 </div>
             )
         } else {
@@ -51,16 +52,25 @@ export default function GameBoardRow(props) {
             )
         }
         
+    } else if (props.gameOver) {
+        return (
+            <div className="row">
+                {elements}
+                { (props.feedback[props.rowIndex][0] === 0 && props.feedback[props.rowIndex][1] === 0) ?
+                <div className="feedback-zone">incorrect </div>
+                :
+                <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+                }
+            </div>
+        )
     } else if (props.rowIndex === props.rowCount) {
         return (
             <div className="row">
                 {elements}
-                    {/* (props.feedback[props.rowIndex][1] === 4 ) ?  */}
                 <SubmitButton 
                     gameBoard={props.gameBoard}
                     feedback={props.feedback}
                     rowIndex={props.rowIndex}
-                    // setFeedback={props.setFeedback}
                     level={props.numOfElements}
                     gameBoardRows={props.gameBoardRows}
                     rowCount={props.rowCount}
@@ -70,6 +80,7 @@ export default function GameBoardRow(props) {
                     guess={guessArray}
                     solution={props.randomNums}
                     setWin={props.setWin}
+                    setGameOver={props.setGameOver}
                 /> 
                
             </div>
