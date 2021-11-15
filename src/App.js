@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import GameBoard from './components/gameboard/GameBoard'
+import Instructions from './components/instructions/Instructions'
+import Welcome from './components/instructions/Welcome'
 import NewGameButton from './components/options/NewGameButton'
 import NumberOptions from './components/options/NumberOptions'
 import Outcome from './components/secret/Outcome'
@@ -25,6 +27,10 @@ function App() {
   // game over state
   const [gameOver, setGameOver] = useState(false)
 
+  //show instructions in modal
+  const [instructions, setInstructions] = useState(false)
+  //show modal
+  const [modal, setModal] = useState(true)
   // difficulty level
   const level = 4
 
@@ -150,8 +156,22 @@ function App() {
       color: "white"
     },
   ]
+  let modalClass
+  if (modal) {
+    modalClass="modal"
+  } else {
+    modalClass="hidden"
+  }
   return (
     <div className="game">
+      
+      <div className={modalClass}>
+        {(instructions) ?
+          <Instructions setModal={setModal}/>
+          :
+          <Welcome setInstructions={setInstructions}/>
+        }
+      </div>
       <div className="game-container">
         <div className="title">Mastermind</div>
         <div className="number-options-container">

@@ -7,7 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -16,6 +15,32 @@ code {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  /* max-height: 812px; */
+  max-width: 375px;
+}
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 8%;
+  width: 375px;  
+  height: 100vh; /* Full height */
+  background-color: white;
+}
+.welcome, .instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message {
+  text-align: center;
+}
+.next, .play {
+  color: white;
+  background-color: black;
+}
+.next:hover {
+  cursor: pointer;
 }
 .title {
   color: white;
