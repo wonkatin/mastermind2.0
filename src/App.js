@@ -171,7 +171,6 @@ function App() {
               rowCount={rowCount}
               guessCount={guessCount}
               setGuessCount={setGuessCount}
-              // setGuess={setGuess}
             />
           }
         </div>

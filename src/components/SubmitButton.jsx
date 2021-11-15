@@ -1,8 +1,8 @@
 export default function SubmitButton(props) {
       // submit guess/check -- will they crack they code???? 
     
-    console.log(props.solution)
-    console.log(props.guess)
+    // console.log(props.solution)
+    // console.log(props.guess)
     // console.log(props.feedback)
     // console.log(props.feedback[props.rowIndex])
     //copy arrays so I don't change the originals
@@ -16,23 +16,52 @@ export default function SubmitButton(props) {
                     props.feedback[props.rowIndex][1] = props.feedback[props.rowIndex][1] + 1
                     console.log("right number and right position")
                     // console.log(props.feedback[props.rowIndex][1])
-                    arr1[i]="checked"
-                    arr2[i]="checked"
-                } else {
-                    props.feedback[props.rowIndex][0] = props.feedback[props.rowIndex][0] + 1
-                    console.log("right number")
-                    // remove from array1 the value of array[i]
-                    // replace item in array
-                    let checked = arr1.indexOf(arr2[i]) 
-                    arr1[checked] = "checked"
-                }
-                
-                console.log(arr1)
-                console.log(arr2)
+                    arr1[i]="checked1"
+                    arr2[i]="checked2"
+                } 
             }
-
+            console.log(arr1)
+            console.log(arr2)
+        }
+        //check if it includes but not exact match
+        for (let i = 0; i < props.level; i ++) {
+            if(arr1.includes(arr2[i])) {
+                props.feedback[props.rowIndex][0] = props.feedback[props.rowIndex][0] + 1
+                console.log("right number")
+                // remove from array1 the value of array[i]
+                // replace item in array
+                let checked = arr1.indexOf(arr2[i]) 
+                arr1[checked] = "checked1"
+            }
+            console.log(arr1)
+            console.log(arr2)
         }
     }
+    // const tryCode = (arr1, arr2) => {
+    //     // separate the logic so it checks and replaces all exact matches first
+    //     for (let i = 0; i < props.level; i ++){
+    //         if(arr1.includes(arr2[i])) {
+    //             if (arr2[i] === arr1[i]) {
+    //                 props.feedback[props.rowIndex][1] = props.feedback[props.rowIndex][1] + 1
+    //                 console.log("right number and right position")
+    //                 // console.log(props.feedback[props.rowIndex][1])
+    //                 arr1[i]="checked"
+    //                 arr2[i]="checked"
+    //             } else {
+    //                 props.feedback[props.rowIndex][0] = props.feedback[props.rowIndex][0] + 1
+    //                 console.log("right number")
+    //                 // remove from array1 the value of array[i]
+    //                 // replace item in array
+    //                 let checked = arr1.indexOf(arr2[i]) 
+    //                 arr1[checked] = "checked"
+    //             }
+                
+    //             console.log(arr1)
+    //             console.log(arr2)
+    //         }
+
+    //     }
+    // }
     console.log(props.feedback)
     console.log(props.rowCount)
     console.log(props.gameBoardRows)
