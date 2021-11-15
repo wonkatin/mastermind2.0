@@ -32,20 +32,21 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * explanations of the technologies used (including APIs)
 
 ## Approach Taken
-
 ## User Stories
+#### MVP: 
 * As a user I want to be able to read the instructions so I can learn how to play the game.
 * As a user I want the computer to randomly generate a 4 number code so that I can try to deduce it.
 * As as user I want to be able to select numbers and create a four number combination guess attempt.
-* As a user I want to be able to undo my guesses before I submit them.
 * As a user I want to be able to submit my guess to check against the secret hidden combination 
 * As a user I want to get feedback information about my guess so I can inform my next guess. 
     * Was one of my numbers correct? 
     * Was one of my numbers correct and in the right position? 
 * As a user I want have ten chances to deduce the secret code.
 * As a user I want to be able to see how many guess attempts remain.
-* As a user I want to be able to forfeit and see the secret code to better understand the game.
 * As user I want to see if I have won or lost
+#### STRETCH GOALS: 
+* As a user I want to be able to undo my guesses before I submit them.
+* As a user I want to be able to forfeit and see the secret code to better understand the game.
 * As a user I want to be able to make the game easier or harder for children or advanced users. 
 * As a user I want to be able to track my score and play against others
 
