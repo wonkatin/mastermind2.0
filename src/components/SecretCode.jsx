@@ -1,7 +1,7 @@
 import NumberElementSecret from './NumberElementSecret'
 
 export default function SecretCode(props) {
-    // console.log(props.randomNums)
+    console.log(props.options)
     const secretCode = props.randomNums.map((randomNum, index) => {
         return (
             <NumberElementSecret
@@ -10,6 +10,9 @@ export default function SecretCode(props) {
                 number={randomNum}
                 color="white"
                 value="?"
+                options={props.options}
+                win={props.win}
+                gameOver={props.gameOver}
                 // value={randomNum}
             />
         )

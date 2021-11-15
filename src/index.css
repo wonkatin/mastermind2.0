@@ -86,6 +86,9 @@ code {
 .hidden {
   display: none
 }
+.outcome{
+  color: white
+}
 .red {
   background-color: #fe2a4e;
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import GameBoard from './components/GameBoard'
 import NumberOptions from './components/NumberOptions'
+import Outcome from './components/Outcome'
 import SecretCode from './components/SecretCode'
 
 function App() {
@@ -179,7 +180,16 @@ function App() {
           <SecretCode 
             gameBoard={gameBoard} 
             randomNums={randomNums}
+            options={options}
+            win={win}
+            gameOver={gameOver}
           />
+          <div className="outcome-container">
+            <Outcome             
+              win={win}
+              gameOver={gameOver}
+            />
+          </div>
         </div>
       </div>
     </div>

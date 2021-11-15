@@ -6,8 +6,8 @@ export default function SubmitButton(props) {
     // console.log(props.feedback)
     // console.log(props.feedback[props.rowIndex])
     //copy arrays so I don't change the originals
-    let array1 = [... props.guess]
-    let array2 = [... props.solution]
+    let array1 = [...props.guess]
+    let array2 = [...props.solution]
     const tryCode = (arr1, arr2) => {
         // separate the logic so it checks and replaces all exact matches first
         for (let i = 0; i < props.level; i ++){
