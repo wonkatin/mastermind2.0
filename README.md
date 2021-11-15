@@ -101,6 +101,7 @@ Sun:
 * GAME LOGIC 🍦🍦🍦
 
 Mon:
+* add welcome & instructions
 * style game 
 * add API info to Readme
 * work on Readme more 
