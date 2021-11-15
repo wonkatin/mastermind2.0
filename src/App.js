@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import GameBoard from './components/GameBoard'
-import NewGameButton from './components/NewGameButton'
-import NumberOptions from './components/NumberOptions'
-import Outcome from './components/Outcome'
-import SecretCode from './components/SecretCode'
+import GameBoard from './components/gameboard/GameBoard'
+import NewGameButton from './components/options/NewGameButton'
+import NumberOptions from './components/options/NumberOptions'
+import Outcome from './components/secret/Outcome'
+import SecretCode from './components/secret/SecretCode'
 
 function App() {
   // secret code in state
