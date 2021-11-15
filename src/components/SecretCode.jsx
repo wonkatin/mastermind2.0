@@ -9,8 +9,8 @@ export default function SecretCode(props) {
                 index={index}
                 number={randomNum}
                 color="white"
-                // value="?"
-                value={randomNum}
+                value="?"
+                // value={randomNum}
             />
         )
     })
