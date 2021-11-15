@@ -11,11 +11,14 @@ export default function GameBoard(props) {
                 feedback={props.feedback}
                 // setFeedback={props.setFeedback}
                 numOfElements={props.numOfElements}
+                gameBoardRows={props.gameBoardRows}
                 rowCount={props.rowCount}
                 guessCount={props.guessCount}
                 setRowCount={props.setRowCount}
                 setGuessCount={props.setGuessCount}
                 randomNums={props.randomNums}
+                setWin={props.setWin}
+                win={props.win}
             />
         )
     })

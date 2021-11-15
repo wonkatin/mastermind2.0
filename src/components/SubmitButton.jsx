@@ -19,11 +19,8 @@ export default function SubmitButton(props) {
                     arr1[i]="checked"
                     arr2[i]="checked"
                 } else {
-
-
                     props.feedback[props.rowIndex][0] = props.feedback[props.rowIndex][0] + 1
                     console.log("right number")
-                    // console.log(props.feedback[props.rowIndex][0])
                     // remove from array1 the value of array[i]
                     // replace item in array
                     let checked = arr1.indexOf(arr2[i]) 
@@ -36,16 +33,29 @@ export default function SubmitButton(props) {
 
         }
     }
-
+    console.log(props.rowCount)
+    console.log(props.gameBoardRows)
     const handleSubmit = () => {
-        updateRowCount()
-        props.setGuessCount(0)
         tryCode(array1 , array2)
+        if (props.feedback[props.rowIndex][1] === 4 ) {
+            props.setWin(true)
+
+            // sometimes ten means 9 when you count from 0 
+        } else if (props.rowCount < props.gameBoardRows - 1 ) {
+            updateRowCount()
+            props.setGuessCount(0)
+        } else {
+
+        }
+
+        // props.setGuessCount(0)
+       
+
     }
     const updateRowCount = () => {
         props.setRowCount(props.rowCount +1)
     }
-
+// is submit button active
     if (props.level === props.guessCount) {
 
         return (

@@ -29,10 +29,33 @@ export default function GameBoardRow(props) {
             />
         )
     })
-    if (props.rowIndex === props.rowCount ) {
+    // is submit button there
+    // when win = true create logic that only shows feedback that has been recorded. DOH 
+ console.log(props.win)
+    if (props.win) {
+        if (props.rowIndex <= props.rowCount) {
+            return (
+                <div className="row">
+                    {elements}
+
+                        <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+
+
+                </div>
+            )
+        } else {
+            return (
+                <div className="row">
+                    {elements}
+                </div>
+            )
+        }
+        
+    } else if (props.rowIndex === props.rowCount) {
         return (
             <div className="row">
                 {elements}
+                    {/* (props.feedback[props.rowIndex][1] === 4 ) ?  */}
                 <SubmitButton 
                     gameBoard={props.gameBoard}
                     feedback={props.feedback}
@@ -46,7 +69,9 @@ export default function GameBoardRow(props) {
                     setGuessCount={props.setGuessCount}
                     guess={guessArray}
                     solution={props.randomNums}
+                    setWin={props.setWin}
                 /> 
+               
             </div>
         )
     } else if (props.rowIndex < props.rowCount && props.feedback) {

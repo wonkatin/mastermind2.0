@@ -18,6 +18,10 @@ function App() {
 
   // feedback array
   const [feedback, setFeedback] = useState([])
+  // win state
+  const [win, setWin] = useState(false)
+  // game over state
+  const [gameOver, setGameOver] = useState(false)
 
   // number of rows in the game
   const gameBoardRows = 10
@@ -71,6 +75,11 @@ function App() {
     console.log(gameBoard)
 
   }, [gameBoard])
+
+  useEffect(() => {
+    console.log(win)
+
+  }, [win])
 
   // Access API for random number generator
   const getRandomNums = async() => {
@@ -156,6 +165,8 @@ function App() {
             setRowCount={setRowCount}
             setGuessCount={setGuessCount}
             randomNums={randomNums}
+            setWin={setWin}
+            win={win}
           />
         </div>
         <div className="secret-container">
