@@ -41,7 +41,6 @@ export default function SubmitButton(props) {
         tryCode(array1 , array2)
         if (props.feedback[props.rowIndex][1] === 4 ) {
             props.setWin(true)
-
             // sometimes ten means 9 when you count from 0 
         } else if (props.rowCount < props.gameBoardRows - 1 ) {
             updateRowCount()
@@ -49,9 +48,6 @@ export default function SubmitButton(props) {
         } else {
             props.setGameOver(true)
         }
-
-       
-
     }
     const updateRowCount = () => {
         props.setRowCount(props.rowCount +1)

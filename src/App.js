@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import GameBoard from './components/GameBoard'
+import NewGameButton from './components/NewGameButton'
 import NumberOptions from './components/NumberOptions'
 import Outcome from './components/Outcome'
 import SecretCode from './components/SecretCode'
@@ -24,41 +25,46 @@ function App() {
   // game over state
   const [gameOver, setGameOver] = useState(false)
 
-  // number of rows in the game
-  const gameBoardRows = 10
-
   // difficulty level
   const level = 4
 
+  // number of rows in the game
+  const gameBoardRows = 10
+
+  // set game state
   useEffect(() => {
-      // get secret code
-      getRandomNums()
-      // set gameboard state
-      let innerArray = []
-      for(let i = 0; i < level; i ++) {
-        innerArray.push(
-          {
-            value: "",
-            color: "white"
-          }
-        )
-      }
-      // console.log(innerArray)
-      const gameBoardArray = []
-      for (let i = 0; i < gameBoardRows; i ++) {
-        // make a copy of the array 10 x
-        gameBoardArray.push([...innerArray])
-      }
-      setGameBoard(gameBoardArray)
-      // set feedback state
-      const feedbackArray = []
-      const innerFeedback = [0,0]
-      for (let i = 0; i < gameBoardRows; i ++) {
-        // make a copy of the array 10 x
-        feedbackArray.push([...innerFeedback])
-      }
-      setFeedback(feedbackArray)
+    newGame()
   }, [])
+
+  // new game
+  const newGame = () => {
+    // get secret code
+    getRandomNums()
+    // set gameboard state
+    let innerArray = []
+    for(let i = 0; i < level; i ++) {
+      innerArray.push(
+        {
+          value: "",
+          color: "white"
+        }
+      )
+    }
+    const gameBoardArray = []
+    for (let i = 0; i < gameBoardRows; i ++) {
+      // make a copy of the array 10 x
+      gameBoardArray.push([...innerArray])
+    }
+    setGameBoard(gameBoardArray)
+    // set feedback state
+    const feedbackArray = []
+    const innerFeedback = [0,0]
+    for (let i = 0; i < gameBoardRows; i ++) {
+      // make a copy of the array 10 x
+      feedbackArray.push([...innerFeedback])
+    }
+    setFeedback(feedbackArray)
+  }
 
   useEffect(() => {
     console.log("secretcode: " + randomNums)
@@ -149,15 +155,25 @@ function App() {
       <div className="game-container">
         <div className="title">Mastermind</div>
         <div className="number-options-container">
-          <NumberOptions 
-            gameBoard={gameBoard}
-            level={level}
-            options={options}
-            rowCount={rowCount}
-            guessCount={guessCount}
-            setGuessCount={setGuessCount}
-            // setGuess={setGuess}
-          />
+          {(win || gameOver) ? 
+            <NewGameButton 
+              setRowCount={setRowCount}
+              setGuessCount={setGuessCount}
+              setWin={setWin}
+              setGameOver={setGameOver}
+              newGame={newGame}
+            /> 
+            : 
+            <NumberOptions 
+              gameBoard={gameBoard}
+              level={level}
+              options={options}
+              rowCount={rowCount}
+              guessCount={guessCount}
+              setGuessCount={setGuessCount}
+              // setGuess={setGuess}
+            />
+          }
         </div>
         <div className="game-board-container">
           <GameBoard 
