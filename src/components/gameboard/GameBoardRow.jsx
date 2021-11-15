@@ -40,7 +40,7 @@ export default function GameBoardRow(props) {
                     { (props.feedback[props.rowIndex][0] === 0 && props.feedback[props.rowIndex][1] === 0) ?
                     <div className="feedback-zone">incorrect </div>
                     :
-                    <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+                    <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right numbers and position </div>
                     }
                 </div>
             )
@@ -59,7 +59,7 @@ export default function GameBoardRow(props) {
                 { (props.feedback[props.rowIndex][0] === 0 && props.feedback[props.rowIndex][1] === 0) ?
                 <div className="feedback-zone">incorrect </div>
                 :
-                <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+                <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right numbers and position </div>
                 }
             </div>
         )
@@ -92,7 +92,7 @@ export default function GameBoardRow(props) {
                 { (props.feedback[props.rowIndex][0] === 0 && props.feedback[props.rowIndex][1] === 0) ?
                 <div className="feedback-zone">incorrect </div>
                 :
-                <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right number and position </div>
+                <div className="feedback-zone"> {props.feedback[props.rowIndex][0]} right numbers {props.feedback[props.rowIndex][1]} right numbers and position </div>
                 }
             </div>
         )
