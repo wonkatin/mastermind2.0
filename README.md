@@ -17,7 +17,10 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 
 ## Live Site
 https://mastermind2.netlify.app/
-* pics of site 
+
+![site-pic-one](./public/site-images/MastermindLive1.png)
+![site-pic-two](./public/site-images/MastermindLive2.png)
+![site-pic-three](./public/site-images/MastermindLive3.png)
 
 ## Installation Instructions
 * make sure you have Node installed 
