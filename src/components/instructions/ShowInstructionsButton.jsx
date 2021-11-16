@@ -1,4 +1,5 @@
 export default function ShowInstructionsButton(props) {
+    // show modal which contains instructions 
     const showInstructions = () => {
         props.setModal(true)
     } 
