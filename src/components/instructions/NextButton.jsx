@@ -3,7 +3,7 @@ export default function NextButton(props) {
         props.setInstructions(true)
     }
     return (
-        <div className="next" onClick={handleNext}>
+        <div className="next hover" onClick={handleNext}>
             Next
         </div>
     )

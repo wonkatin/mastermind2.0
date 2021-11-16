@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.hover:hover {
+  cursor: pointer;
+}
 .game {
   display: flex;
   flex-direction: column;
@@ -39,9 +42,7 @@ code {
   color: white;
   background-color: black;
 }
-.next:hover {
-  cursor: pointer;
-}
+
 .title {
   color: white;
   font-size: 2em;
@@ -50,18 +51,28 @@ code {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 10fr 1fr
+  grid-template-rows: 1.25fr .75fr 1fr 10fr 1fr
+}
+.buttons-container {
+  display: flex;
+  align-items: center;
 }
 .number-options-container {
   display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
   align-items: center;
+}
+.show-instructions {
+  /* display: flex;
+  justify-content: center; */
+  color: black;
+  background-color: white;
 }
 .number-options {
   display: flex;
 }
-.hover:hover {
-  cursor: pointer;
-}
+
 .default {
   cursor: default;
 }
@@ -69,9 +80,6 @@ code {
   background-color: white;
   /* width: 100%;
   height: 100% */
-}
-.new-game:hover {
-  cursor: pointer;
 }
 .game-board {
   height: 100%;
@@ -85,9 +93,6 @@ code {
 }
 .submit {
   color: white;
-}
-.submit:hover {
-  cursor: pointer;
 }
 .feedback-zone {
   color: white

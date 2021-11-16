@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import GameBoard from './components/gameboard/GameBoard'
 import Instructions from './components/instructions/Instructions'
+import ShowInstructions from './components/instructions/ShowInstructions'
 import Welcome from './components/instructions/Welcome'
 import NewGameButton from './components/options/NewGameButton'
 import NumberOptions from './components/options/NumberOptions'
@@ -76,23 +77,23 @@ function App() {
     console.log("secretcode: " + randomNums)
   }, [randomNums])
 
-  useEffect(() => {
-    console.log("guess count: " + guessCount)
-  }, [guessCount])
+  // useEffect(() => {
+  //   console.log("guess count: " + guessCount)
+  // }, [guessCount])
 
-  useEffect(() => {
-    console.log("row count: " + rowCount)
-  }, [rowCount])
+  // useEffect(() => {
+  //   console.log("row count: " + rowCount)
+  // }, [rowCount])
 
-  useEffect(() => {
-    console.log(gameBoard)
+  // useEffect(() => {
+  //   console.log(gameBoard)
 
-  }, [gameBoard])
+  // }, [gameBoard])
 
-  useEffect(() => {
-    console.log(feedback)
+  // useEffect(() => {
+  //   console.log(feedback)
 
-  }, [feedback])
+  // }, [feedback])
 
   useEffect(() => {
     console.log(win)
@@ -162,6 +163,7 @@ function App() {
   } else {
     modalClass="hidden"
   }
+
   return (
     <div className="game">
       
@@ -173,7 +175,11 @@ function App() {
         }
       </div>
       <div className="game-container">
+        
         <div className="title">Mastermind</div>
+        <div className="buttons-container">
+          <ShowInstructions setModal={setModal}/>
+        </div>
         <div className="number-options-container">
           {(win || gameOver) ? 
             <NewGameButton 
@@ -193,6 +199,8 @@ function App() {
               setGuessCount={setGuessCount}
             />
           }
+
+
         </div>
         <div className="game-board-container">
           <GameBoard 

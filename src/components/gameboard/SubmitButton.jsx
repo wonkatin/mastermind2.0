@@ -85,7 +85,7 @@ export default function SubmitButton(props) {
     if (props.level === props.guessCount) {
 
         return (
-            <div className="submit" onClick={handleSubmit}>
+            <div className="submit hover" onClick={handleSubmit}>
                 Submit
             </div>
         )

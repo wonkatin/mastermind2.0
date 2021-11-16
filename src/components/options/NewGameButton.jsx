@@ -7,7 +7,7 @@ export default function NewGameButton(props) {
         props.newGame()
     }
     return (
-        <div className="new-game" onClick={handleNewGameClick}>
+        <div className="new-game hover" onClick={handleNewGameClick}>
             NEW GAME
         </div>
     )
