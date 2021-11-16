@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 button {
   background: transparent;
   box-shadow: 0px 0px 0px transparent;
@@ -29,10 +33,6 @@ button:active {
 
 button:focus {
   outline: 0;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 .hover:hover {
   cursor: pointer;
@@ -67,8 +67,10 @@ code {
 }
 
 .title {
+  font-family: "Press Start 2P";
   color: white;
-  font-size: 2em;
+  font-size: 36px;
+  margin: 10px
 }
 .game-container {
   height: 100%;

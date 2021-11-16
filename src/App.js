@@ -177,7 +177,7 @@ function App() {
       </div>
       <div className="game-container">
         
-        <div className="title">Mastermind</div>
+        <div className="title">MASTERMIND</div>
         <div className="buttons-container">
           <ShowInstructionsButton setModal={setModal}/>
         </div>
