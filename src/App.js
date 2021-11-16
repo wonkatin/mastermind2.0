@@ -159,14 +159,18 @@ function App() {
     },
   ]
   let modalClass
+  let gameContainerClass 
   if (modal) {
     modalClass="modal"
+    gameContainerClass="hidden"
   } else {
     modalClass="hidden"
+    gameContainerClass="game-container"
   }
 
   return (
     <div className="game">
+      <div className="title">MASTERMIND</div>
       
       <div className={modalClass}>
         {(instructions) ?
@@ -175,9 +179,8 @@ function App() {
           <Welcome setInstructions={setInstructions}/>
         }
       </div>
-      <div className="game-container">
+      <div className={gameContainerClass}>
         
-        <div className="title">MASTERMIND</div>
         <div className="buttons-container">
           <ShowInstructionsButton setModal={setModal}/>
         </div>
