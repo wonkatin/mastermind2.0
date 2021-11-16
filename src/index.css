@@ -43,11 +43,14 @@ button:focus {
   height: 100vh;
   /* max-height: 812px; */
   max-width: 375px;
+  margin-top: 10px;
+  margin-left: 15px;
+  /* padding-bottom: 10px; */
 }
 .modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
+  left: 15px;
   top: 8%;
   width: 375px;  
   height: 100vh; /* Full height */
@@ -60,12 +63,23 @@ button:focus {
 }
 .message {
   text-align: center;
+  font-family: "Press Start 2P";
 }
 .next, .play {
   color: white;
   background-color: black;
 }
-
+.instructions-title {
+  font-size: 22px;
+}
+.instructions-image {
+  padding: 5px;
+}
+.image {
+  width: 100%;
+  height: auto;
+  
+}
 .title {
   font-family: "Press Start 2P";
   color: white;
@@ -125,7 +139,7 @@ button:focus {
 .secret-container {
   display: flex;
   align-items: center;
-
+  margin-bottom: 20px
 }
 .secret {
   display: flex;
