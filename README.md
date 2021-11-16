@@ -124,3 +124,24 @@ Mon:
 * add API info to Readme
 * work on Readme more 
 
+## Resources
+
+https://www.geekstutorialpoint.com/2020/06/how-to-copy-clone-array-in-javascript.html
+
+https://stackoverflow.com/questions/5915789/how-to-replace-item-in-array
+
+https://www.w3schools.com/jsref/jsref_includes_array.asp
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+
+https://reactjs.org/docs/conditional-rendering.html
+
+https://stackoverflow.com/questions/46592833/how-to-use-switch-statement-inside-a-react-component
+
+https://www.geeksforgeeks.org/how-to-map-data-into-components-using-reactjs/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+https://www.w3schools.com/howto/howto_css_modals.asp
+
+https://fonts.google.com/specimen/Press+Start+2P?query=press+
