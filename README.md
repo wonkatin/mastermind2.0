@@ -24,6 +24,8 @@ https://mastermind2.netlify.app/
 <img alt="site pice one" src="./public/site-images/MastermindLive1.png" width=350px height=350px>
 <img alt="site pice two" src="./public/site-images/MastermindLive2.png" width=350px height=350px>
 <img alt="site pice three" src="./public/site-images/MastermindLive3.png" width=350px height=350px>
+<img alt="site pice four" src="./public/site-images/MastermindLive4.png" width=350px height=350px>
+<img alt="site pice five" src="./public/site-images/MastermindLive5.png" width=350px height=350px>
 
 ## Installation Instructions
 * make sure you have Node installed 
