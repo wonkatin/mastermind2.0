@@ -1,5 +1,6 @@
 export default function NumberElementOption(props) {
     // add onclick modal telling user to submit their guess
+    // disable onClick if guess count hits level number 
     if (props.guessCount >= props.level) {
         return (
             <div className={`number-element ${props.color}`}>

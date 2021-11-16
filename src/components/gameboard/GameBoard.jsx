@@ -1,6 +1,7 @@
 import GameBoardRow from "./GameBoardRow";
 
 export default function GameBoard(props) {
+    // create game board row components
     const rowsArray = Array.from(Array(props.gameBoardRows))
     const rows = rowsArray.map((row, index) => {
         return (

@@ -1,4 +1,5 @@
 export default function PlayButton(props) {
+    // hides modal
     const handlePlay = () => {
         props.setModal(false)
     }

@@ -6,12 +6,12 @@ export default function GameBoardRow(props) {
     const array = props.gameBoard[props.rowCount]
     let guessArray = []
 
-    // do not forget to check the useeffect
+    // do not forget to check the useEffect has finished
     if(props.gameBoard) {
         guessArray = array.map(el => el.value)
     }
 
-    // render components
+    // render number components
     const elementsArray = Array.from(Array(props.numOfElements))
     const elements = elementsArray.map((element, index) => {
         return(
@@ -24,7 +24,12 @@ export default function GameBoardRow(props) {
         )
     })
 
-    // is submit button there
+    // is submit button there? is feed back there?
+    // remove remaining submit buttons if game is won before 10 -- would have to include game over if add option to end game early
+    // show submit button if virtual row and row count are the same
+    // render "incorrect" if both numbers in feedback array at that row are 0
+    // check for feedback and if component row is less than count (row in virtual gameboard)
+    // don't show virtual feedback for future rows (ie: [0,0])
     if (props.win) {
         if (props.rowIndex <= props.rowCount) {
             return (

@@ -1,4 +1,5 @@
 export default function NewGameButton(props) {
+    // reset game state
     const handleNewGameClick = () => {
         props.setRowCount(0);
         props.setGuessCount(0);
