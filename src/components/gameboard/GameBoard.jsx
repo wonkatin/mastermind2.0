@@ -9,7 +9,6 @@ export default function GameBoard(props) {
                 rowIndex={index}
                 gameBoard={props.gameBoard}
                 feedback={props.feedback}
-                // setFeedback={props.setFeedback}
                 numOfElements={props.numOfElements}
                 gameBoardRows={props.gameBoardRows}
                 rowCount={props.rowCount}
@@ -24,9 +23,6 @@ export default function GameBoard(props) {
             />
         )
     })
-    
-    // fill(<GameBoardRow key={index} numOfElements={props.numOfElements}/>) does not give unique key
-    // console.log(rows)
 
     return (
         <div className="game-board">

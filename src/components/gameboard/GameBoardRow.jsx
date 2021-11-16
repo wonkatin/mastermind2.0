@@ -10,13 +10,7 @@ export default function GameBoardRow(props) {
     if(props.gameBoard) {
         guessArray = array.map(el => el.value)
     }
-    // access feedback data
-    // const feedbackData = props.feedback[props.rowIndex]
-    // if (props.feedback) {
-    //     const rightNum = props.feedback[props.rowIndex][0]
-    //     const rightPos = props.feedback[props.rowIndex][1]
 
-    // }
     // render components
     const elementsArray = Array.from(Array(props.numOfElements))
     const elements = elementsArray.map((element, index) => {
@@ -31,7 +25,7 @@ export default function GameBoardRow(props) {
     })
     // is submit button there
     // when win = true create logic that only shows feedback that has been recorded. DOH 
- console.log(props.win)
+
     if (props.win) {
         if (props.rowIndex <= props.rowCount) {
             return (

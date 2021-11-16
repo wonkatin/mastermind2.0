@@ -77,29 +77,6 @@ function App() {
   //   console.log("secretcode: " + randomNums)
   // }, [randomNums])
 
-  // useEffect(() => {
-  //   console.log("guess count: " + guessCount)
-  // }, [guessCount])
-
-  // useEffect(() => {
-  //   console.log("row count: " + rowCount)
-  // }, [rowCount])
-
-  // useEffect(() => {
-  //   console.log(gameBoard)
-
-  // }, [gameBoard])
-
-  // useEffect(() => {
-  //   console.log(feedback)
-
-  // }, [feedback])
-
-  useEffect(() => {
-    console.log(win)
-
-  }, [win])
-
   // Access API for random number generator
   const getRandomNums = async() => {
       try {
@@ -202,8 +179,6 @@ function App() {
               setGuessCount={setGuessCount}
             />
           }
-
-
         </div>
         <div className="game-board-container">
           <GameBoard 
