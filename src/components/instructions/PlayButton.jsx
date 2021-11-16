@@ -3,8 +3,8 @@ export default function PlayButton(props) {
         props.setModal(false)
     }
     return (
-        <div className="play hover" onClick={handlePlay}>
+        <button className="play hover" onClick={handlePlay}>
             Play
-        </div>
+        </button>
     )
 }

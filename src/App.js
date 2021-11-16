@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import GameBoard from './components/gameboard/GameBoard'
 import Instructions from './components/instructions/Instructions'
-import ShowInstructions from './components/instructions/ShowInstructions'
+import ShowInstructionsButton from './components/instructions/ShowInstructionsButton'
+import ShowInstructions from './components/instructions/ShowInstructionsButton'
 import Welcome from './components/instructions/Welcome'
 import NewGameButton from './components/options/NewGameButton'
 import NumberOptions from './components/options/NumberOptions'
@@ -178,7 +179,7 @@ function App() {
         
         <div className="title">Mastermind</div>
         <div className="buttons-container">
-          <ShowInstructions setModal={setModal}/>
+          <ShowInstructionsButton setModal={setModal}/>
         </div>
         <div className="number-options-container">
           {(win || gameOver) ? 

@@ -85,16 +85,16 @@ export default function SubmitButton(props) {
     if (props.level === props.guessCount) {
 
         return (
-            <div className="submit hover" onClick={handleSubmit}>
+            <button className="submit hover" onClick={handleSubmit}>
                 Submit
-            </div>
+            </button>
         )
     } else {
         return (
             // add onclick method telling user to pick more numbers
-            <div className="submit">
+            <button className="submit">
                 Submit
-            </div>
+            </button>
         )
     }
 
