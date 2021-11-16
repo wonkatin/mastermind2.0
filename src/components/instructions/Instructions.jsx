@@ -8,7 +8,7 @@ export default function Instructions(props) {
                 Instructions
             </div>
             <div className="instructions-image">
-                <img className="image" src={image} alt="image of game play with instructions"/>
+                <img className="image" src={image} alt="screenshot of game play with instructions"/>
             </div>
             <PlayButton setModal={props.setModal}/>
         </div>

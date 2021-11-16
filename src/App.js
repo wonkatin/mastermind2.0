@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import GameBoard from './components/gameboard/GameBoard'
 import Instructions from './components/instructions/Instructions'
 import ShowInstructionsButton from './components/instructions/ShowInstructionsButton'
-import ShowInstructions from './components/instructions/ShowInstructionsButton'
 import Welcome from './components/instructions/Welcome'
 import NewGameButton from './components/options/NewGameButton'
 import NumberOptions from './components/options/NumberOptions'
@@ -74,9 +73,9 @@ function App() {
     setFeedback(feedbackArray)
   }
 
-  useEffect(() => {
-    console.log("secretcode: " + randomNums)
-  }, [randomNums])
+  // useEffect(() => {
+  //   console.log("secretcode: " + randomNums)
+  // }, [randomNums])
 
   // useEffect(() => {
   //   console.log("guess count: " + guessCount)
