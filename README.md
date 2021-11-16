@@ -16,7 +16,7 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * A player who guesses the secret code by their tenth attempt will win!
 
 ## Live Site
-* link
+https://mastermind2.netlify.app/
 * pics of site 
 
 ## Installation Instructions
@@ -36,6 +36,9 @@ To generate random numbers I used https://www.random.org/integers/ to make a cal
 >>"RANDOM.ORG offers true random numbers to anyone on the Internet. The randomness comes from atmospheric noise, which for many purposes is better than the pseudo-random number algorithms typically used in computer programs."
 
 ## Approach Taken
+To create this app I began a Readme outlining what the app would do, an overview of the game, and the rules. I created user stores to define the functionality of the app. I defined my MVP and prioritized stretch goals. I created my react app and immediately made sure that I could access the API. The challenge with the API was that it returns a plain HTML text, not JSON. The text also includes line breaks, so I split the string, removed the extra lines and turned the strings into integers. Once I had a nice array of four numbers I was able to start building my game. I stubbed out components and began rendering them. I created a virtual game board and a virtual feedback array to hold information about the plays taken. When my components render they access their values and colors based on these virtual elements. Likewise, when guesses are clicked and when submit is fired, information gets stored in the virtual game that lives in state. I also used state to keep track of the secret code, a row count and a guess count, a win state and a lose state and the state that defines whether the welcome/instructions modal is visible. 
+
+A major focal point of the Mastermind game is the game logic that is necessary to produce feedback about different combinations. Having duplicate numbers in the secret code created an extra challenge for the game logic. Ultimately I decided to create copies of the two arrays before I checked them against each other so that I could replace the accounted for numbers without affecting the virtual game board or feedback arrays. In this function, the game first checks once for each number in the solution, whether the guess array includes that number and if it is an exact match. Then it checks again if includes it, since it is possible to be included but not an exact match. Each time a number is included the correct feedback is incremented and stored in the virtual feedback array. 
 
 ## User Stories
 #### MVP: 
@@ -63,11 +66,9 @@ To generate random numbers I used https://www.random.org/integers/ to make a cal
 * Ten chances to win
 * Show secret code after win/lose 
 
-## Unsolved Problems
-
 ## Stretch Goals
-- Make site fully responsive
-- Change numbers to color elements (Red, Orange, Yellow, Green, Blue, Indigo, Violet and White)
+- Make site fully responsive & accessible
+- Add colors to number elements (Red, Orange, Yellow, Green, Blue, Indigo, Violet and White)
 - Change feedback responses to colored element 
     * red pegs signify right number and right position
     * white pegs signify just right number 

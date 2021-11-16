@@ -7,7 +7,6 @@ export default function NumberOptions(props) {
         const handleClick = () => {
             props.gameBoard[props.rowCount][props.guessCount] = {value: option.value, color: option.color}
             updateGuessCount()
-            // set state of guess with spread opperator? 
         }
         
         const updateGuessCount = () => {

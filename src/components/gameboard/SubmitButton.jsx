@@ -1,5 +1,5 @@
 export default function SubmitButton(props) {
-      // submit guess/check -- will they crack they code???? 
+    // submit guess/check -- will they crack they code???? 
     //copy arrays so I don't change the originals
     let array1 = [...props.guess]
     let array2 = [...props.solution]
@@ -43,7 +43,7 @@ export default function SubmitButton(props) {
         props.setRowCount(props.rowCount +1)
     }
     
-// is submit button active
+    // is submit button active
     if (props.level === props.guessCount) {
 
         return (

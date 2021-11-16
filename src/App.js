@@ -23,15 +23,19 @@ function App() {
 
   // feedback array
   const [feedback, setFeedback] = useState([])
+
   // win state
   const [win, setWin] = useState(false)
+  
   // game over state
   const [gameOver, setGameOver] = useState(false)
 
   //show instructions in modal
   const [instructions, setInstructions] = useState(false)
+
   //show modal
   const [modal, setModal] = useState(true)
+
   // difficulty level
   const level = 4
 
@@ -134,6 +138,7 @@ function App() {
       color: "white"
     },
   ]
+
   let modalClass
   let gameContainerClass 
   if (modal) {

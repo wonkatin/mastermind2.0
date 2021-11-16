@@ -23,9 +23,8 @@ export default function GameBoardRow(props) {
             />
         )
     })
-    // is submit button there
-    // when win = true create logic that only shows feedback that has been recorded. DOH 
 
+    // is submit button there
     if (props.win) {
         if (props.rowIndex <= props.rowCount) {
             return (

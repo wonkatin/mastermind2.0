@@ -12,7 +12,6 @@ export default function SecretCode(props) {
                 options={props.options}
                 win={props.win}
                 gameOver={props.gameOver}
-                // value={randomNum}
             />
         )
     })
