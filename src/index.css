@@ -59,7 +59,8 @@ button:focus {
   left: 15px;
   top: 60px;
   width: 375px;  
-  height: 475px; /* Full height */
+  height: 475px;
+  /* height: 100%; */
   background-color: white;
   display: flex;
 }

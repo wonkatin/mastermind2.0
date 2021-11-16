@@ -29,9 +29,14 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
     >`$ npm start` 
 
 ## Technologies Used
-* explanations of the technologies used (including APIs)
+Mastermind was built using React.js, Javascript, HTML & CSS 
+
+To generate random numbers I used https://www.random.org/integers/ to make a call to the API: https://www.random.org/clients/http/api/.
+
+>>"RANDOM.ORG offers true random numbers to anyone on the Internet. The randomness comes from atmospheric noise, which for many purposes is better than the pseudo-random number algorithms typically used in computer programs."
 
 ## Approach Taken
+
 ## User Stories
 #### MVP: 
 * As a user I want to be able to read the instructions so I can learn how to play the game.
@@ -44,11 +49,12 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * As a user I want have ten chances to deduce the secret code.
 * As a user I want to be able to see how many guess attempts remain.
 * As user I want to see if I have won or lost
+
 #### STRETCH GOALS: 
 * As a user I want to be able to undo my guesses before I submit them.
 * As a user I want to be able to forfeit and see the secret code to better understand the game.
 * As a user I want to be able to make the game easier or harder for children or advanced users. 
-* As a user I want to be able to track my score and play against others
+* As a user I want to be able to track my score and play against others.
 
 ## MVP
 * Detailed instructions 
@@ -57,14 +63,10 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 * Ten chances to win
 * Show secret code after win/lose 
 
-## Wireframes
-![welcome-wireframe](./public/wireframes/welcome.png)
-![instructions-wireframe](./public/wireframes/instructions.png)
-![game-wireframe](./public/wireframes/game.png)
-![game-play-wireframe](./public/wireframes/gameplay.png)
-![win-wireframe](./public/wireframes/win.png)
-![game-over-wireframe](./public/wireframes/gameover.png)
+## Unsolved Problems
+
 ## Stretch Goals
+- Make site fully responsive
 - Change numbers to color elements (Red, Orange, Yellow, Green, Blue, Indigo, Violet and White)
 - Change feedback responses to colored element 
     * red pegs signify right number and right position
@@ -76,6 +78,14 @@ Mastermind is a deductive reasoning game. The player's goal is to correctly iden
 - Add animations
 - Ability to keep score (two player game) 
 - Add a turn timer
+
+## Wireframes
+![welcome-wireframe](./public/wireframes/welcome.png)
+![instructions-wireframe](./public/wireframes/instructions.png)
+![game-wireframe](./public/wireframes/game.png)
+![game-play-wireframe](./public/wireframes/gameplay.png)
+![win-wireframe](./public/wireframes/win.png)
+![game-over-wireframe](./public/wireframes/gameover.png)
 
 
 ## Sprints
@@ -106,12 +116,4 @@ Mon:
 * style game 
 * add API info to Readme
 * work on Readme more 
-
-## Unsolved Problems
-## Resources Used
-
-
-## RESTful routing chart 
-## database ERDs
-
 
