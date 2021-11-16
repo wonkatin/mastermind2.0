@@ -3,7 +3,7 @@
 ## Overview
 Mastermind is a deductive reasoning game. The player's goal is to correctly identify the secret code (number combination). Every guess the player attempts will be followed by feedback from the computer whether the user guessed a number correctly and/or if it was in the correct position. The player's task is to analyze the feedback and deduce the secret code. Ten turns/guess attempts will be given.  
 ## Game Rules
-* At the start of the game the computer will randomly select a combination code of four different numbers. 
+* At the start of the game the computer will call upon an API to randomly select a combination of four different numbers. 
 * The possible numbers are 0, 1, 2, 3, 4, 5, 6, 7. Duplicates are allowed, for example: 3389 or 7567.
 * The player has ten attempts to determine the secret code.
 * Each guess attempt will be given feedback with one or more of the following responses: 
