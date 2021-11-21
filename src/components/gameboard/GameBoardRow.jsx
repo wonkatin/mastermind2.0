@@ -1,5 +1,6 @@
 import NumberElement from './NumberElement'
 import SubmitButton from './SubmitButton'
+import UndoButton from './UndoButton'
 
 export default function GameBoardRow(props) {
     // access the guess array to be checked in submit button
@@ -65,6 +66,12 @@ export default function GameBoardRow(props) {
         return (
             <div className="row">
                 {elements}
+                <UndoButton 
+                    gameBoard={props.gameBoard}
+                    rowCount={props.rowCount}
+                    setGuessCount={props.setGuessCount}
+                    guessCount={props.guessCount}
+                />
                 <SubmitButton 
                     gameBoard={props.gameBoard}
                     feedback={props.feedback}
