@@ -27,20 +27,24 @@ export default function SubmitButton(props) {
     }
 
     const handleSubmit = () => {
-        tryCode(array1 , array2)
-        // if there are 4 right number and position WIN WIN WIN
-        if (props.feedback[props.rowIndex][1] === 4 ) {
-            props.setWin(true)
-            // sometimes ten means 9 when you count from 0 
-            // game crashes if count goes above 9 b/c it is then 
-            // referring to and index (10) elsewhere in the game that doesn't exist
-            // since parts of logic count on rowCount
-            // gameBoard and feedback go to 9
-        } else if (props.rowCount < props.gameBoardRows - 1 ) {
-            updateRowCount()
-            props.setGuessCount(0)
+        if (props.guessCount < props.level  ) {
+            return
         } else {
-            props.setGameOver(true)
+            tryCode(array1 , array2)
+            // if there are 4 right number and position WIN WIN WIN
+            if (props.feedback[props.rowIndex][1] === props.level ) {
+                props.setWin(true)
+                // sometimes ten means 9 when you count from 0 
+                // game crashes if count goes above 9 b/c it is then 
+                // referring to and index (10) elsewhere in the game that doesn't exist
+                // since parts of logic count on rowCount
+                // gameBoard and feedback go to 9
+            } else if (props.rowCount < props.gameBoardRows - 1 ) {
+                updateRowCount()
+                props.setGuessCount(0)
+            } else {
+                props.setGameOver(true)
+            }
         }
     }
     // track row count so we know what row we are on in virtual gameboard
@@ -50,20 +54,13 @@ export default function SubmitButton(props) {
     
     // is submit button active
     // enable submit button if guessCount hits level number
-    if (props.level === props.guessCount) {
-
-        return (
-            <button className="submit hover" onClick={handleSubmit}>
-                Submit
-            </button>
-        )
-    } else {
-        return (
-            // add onclick method telling user to pick more numbers
-            <button className="submit">
-                Submit
-            </button>
-        )
-    }
+    
+    return (
+        <button className={`submit ${props.guessCount < props.level ? "hover" : " "}`} disabled={props.guessCount < props.level} onClick={handleSubmit}>
+            Submit
+        </button>
+    )
+    
+    
 
 }
