@@ -26,9 +26,9 @@ export default function SubmitButton(props) {
     }
 
     const handleSubmit = () => {
-        if (props.guessCount < props.level  ) {
-            return
-        } else {
+        // if (props.guessCount < props.level  ) {
+        //     return
+        // } else {
             tryCode(arrayGuess , arraySolution)
             // if there are 4 right number and position WIN WIN WIN
             if (props.feedback[props.rowIndex][1] === props.level ) {
@@ -44,7 +44,7 @@ export default function SubmitButton(props) {
             } else {
                 props.setGameOver(true)
             }
-        }
+        // }
     }
     // track row count so we know what row we are on in virtual gameboard
     const updateRowCount = () => {
@@ -55,7 +55,7 @@ export default function SubmitButton(props) {
     // enable submit button if guessCount hits level number
     
     return (
-        <button className={`submit ${props.guessCount < props.level ? "hover" : " "}`} disabled={props.guessCount < props.level} onClick={handleSubmit}>
+        <button className={`submit ${props.guessCount === props.level ? "hover" : " "}`} disabled={props.guessCount < props.level} onClick={handleSubmit}>
             Submit
         </button>
     )
