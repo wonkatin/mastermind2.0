@@ -1,27 +1,26 @@
 export default function SubmitButton(props) {
     // submit guess/check -- will they crack they code???? 
     //copy arrays so I don't change the originals
-    let array1 = [...props.guess]
-    let array2 = [...props.solution]
-    const tryCode = (arr1, arr2) => {
+    let arrayGuess = [...props.guess]
+    let arraySolution = [...props.solution]
+    const tryCode = (guess, solution) => {
         // separate the logic so it checks and replaces all exact matches first
         for (let i = 0; i < props.level; i ++){
-            if(arr1.includes(arr2[i])) {
-                if (arr2[i] === arr1[i]) {
+            if(guess.includes(solution[i])) {
+                if (solution[i] === guess[i]) {
                     props.feedback[props.rowIndex][1] = props.feedback[props.rowIndex][1] + 1
-                    arr1[i]="checked1"
-                    arr2[i]="checked2"
+                    guess[i]="checked1"
+                    solution[i]="checked2"
                 } 
             }
         }
         //check if it includes but not exact match
         for (let i = 0; i < props.level; i ++) {
-            if(arr1.includes(arr2[i])) {
+            if(guess.includes(solution[i])) {
                 props.feedback[props.rowIndex][0] = props.feedback[props.rowIndex][0] + 1
-                // remove from array1 the value of array[i]
-                // replace item in array
-                let checked = arr1.indexOf(arr2[i]) 
-                arr1[checked] = "checked1"
+                // "check" from guess array the value of solution[i]
+                let checked = guess.indexOf(solution[i]) 
+                guess[checked] = "checked1"
             }
         }
     }
@@ -30,7 +29,7 @@ export default function SubmitButton(props) {
         if (props.guessCount < props.level  ) {
             return
         } else {
-            tryCode(array1 , array2)
+            tryCode(arrayGuess , arraySolution)
             // if there are 4 right number and position WIN WIN WIN
             if (props.feedback[props.rowIndex][1] === props.level ) {
                 props.setWin(true)
