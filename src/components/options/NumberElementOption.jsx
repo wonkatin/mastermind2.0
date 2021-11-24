@@ -11,21 +11,18 @@ export default function NumberElementOption(props) {
         }
     // add onclick modal telling user to submit their guess
     // disable onClick if guess count hits level number 
-    if (props.guessCount >= props.level) {
         return (
-            <div className={`number-element ${props.color}`}>
-                <div className="number-text-container">
-                    {props.value}
-                </div>
-            </div>
-        )
-    } else {
-        return (
-            <button className={`number-element hover ${props.color}`} onClick={handleClick}>
+            <button className={`number-element ${props.guessCount < props.level ? "hover" : " "} ${props.color}`} disabled={props.guessCount >= props.level} onClick={handleClick}>
                 <div className="number-text-container">
                     {props.value}
                 </div>
             </button>
         )
-    }
+    
 }
+
+    // return( 
+    //     <button className={`undo ${props.guessCount ? "hover" : " "}`} disabled={props.guessCount === 0} onClick={handleUndo}>
+    //         Undo
+    //     </button>
+    // )
