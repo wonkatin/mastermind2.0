@@ -36,6 +36,9 @@ function App() {
   //show modal
   const [modal, setModal] = useState(true)
 
+  // feedback info
+  const [feedbackInfo, setFeedbackInfo] = useState(false)
+
   // difficulty level
   const level = 4
 
@@ -77,9 +80,9 @@ function App() {
     setFeedback(feedbackArray)
   }
 
-  // useEffect(() => {
-  //   console.log("secretcode: " + randomNums)
-  // }, [randomNums])
+  useEffect(() => {
+    console.log("secretcode: " + randomNums)
+  }, [randomNums])
 
   // Access API for random number generator
   const getRandomNums = async() => {
@@ -195,6 +198,8 @@ function App() {
             guessCount={guessCount}
             setRowCount={setRowCount}
             setGuessCount={setGuessCount}
+            feedbackInfo={feedbackInfo}
+            setFeedbackInfo={setFeedbackInfo}
             randomNums={randomNums}
             setWin={setWin}
             win={win}
