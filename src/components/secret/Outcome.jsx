@@ -15,7 +15,7 @@ export default function Outcome(props) {
         return(
             <div className="outcome">
     
-            -- can you crack the code?
+             secret code
           </div>
         )
     }

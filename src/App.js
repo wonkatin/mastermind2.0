@@ -77,9 +77,9 @@ function App() {
     setFeedback(feedbackArray)
   }
 
-  useEffect(() => {
-    console.log("secretcode: " + randomNums)
-  }, [randomNums])
+  // useEffect(() => {
+  //   console.log("secretcode: " + randomNums)
+  // }, [randomNums])
 
   // Access API for random number generator
   const getRandomNums = async() => {
