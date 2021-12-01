@@ -158,7 +158,26 @@ button:focus {
   cursor: pointer
 } */
 .feedback-zone {
-  color: white
+  color: white;
+  margin-left: 10px
+}
+.circle {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
+}
+.right-number {
+  margin-bottom: 7px;
+}
+.right-position, .right-number {
+  display: flex;
+}
+.right-position .circle {
+  background-color: red
+}
+.right-number .circle {
+  background-color: white
 }
 .secret-container {
   display: flex;
