@@ -25,18 +25,21 @@ export default function GameBoardRow(props) {
         )
     })
 
+    const handleCircle = () => {
+        props.setFeedbackInfo(true)
+    }
     
     const feedback = (num) => {
         let arr = []
         if (num > 0) {
             for (let i = 1; i <= num; i ++) {
-                arr.push(<div className="circle" key={i}></div>)
+                arr.push(<button className="circle hover" onClick={handleCircle} key={i}></button>)
             }
             return arr
         }
     }
     // console.log(props.feedback)
-    
+
     // is submit button there? is feed back there?
     // remove remaining submit buttons if game is won before 10 -- would have to include game over if add option to end game early
     // show submit button if virtual row and row count are the same
@@ -59,6 +62,7 @@ export default function GameBoardRow(props) {
                         <div className="right-position">
                             {feedback(props.feedback[props.rowIndex][1])}
                         </div>
+                        <div className="feedback-info"> </div>
                     </div>
                     }
                 </div>

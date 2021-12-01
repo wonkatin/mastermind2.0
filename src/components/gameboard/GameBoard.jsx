@@ -16,6 +16,8 @@ export default function GameBoard(props) {
                 guessCount={props.guessCount}
                 setRowCount={props.setRowCount}
                 setGuessCount={props.setGuessCount}
+                feedbackInfo={props.feedbackInfo}
+                setFeedbackInfo={props.setFeedbackInfo}
                 randomNums={props.randomNums}
                 setWin={props.setWin}
                 win={props.win}
